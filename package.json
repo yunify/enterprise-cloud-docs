@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yunify/express-docs.git"
+    "url": "git+https://github.com/raksmartinfo/raksmartdocs.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/yunify/express-docs/issues"
+    "url": "https://github.com/raksmartinfo/raksmartdocs/issues"
   },
-  "homepage": "https://github.com/yunify/express-docs#readme",
+  "homepage": "https://github.com/raksmartinfo/raksmartdocs#readme",
   "dependencies": {
     "nodemon": "^2.0.15"
   },
