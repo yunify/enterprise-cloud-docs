@@ -24,16 +24,12 @@ keyword: 云计算, 迁移中心, V2V
         <td>单个任务支持的最大迁移虚拟机数量</td>
         <td>20</td>
     </tr>
-      <tr>
-        <td>单个宿主节点（hyper节点）同时支持源虚拟机迁移的最大数量</td>
-        <td>3</td>
-    </tr>
     <tr>
         <td>支持的迁移平台</td>
-        <td>当前支持 Vmware Vsphere</td>
+        <td>当前支持 VMware vSphere</td>
     </tr>
   <tr>
         <td>支持的源虚拟机类型</td>
-        <td>普通虚拟机，不支持模板虚拟机</td>
+        <td>普通虚拟机，不支持模板虚拟机和 vApp</td>
     </tr>
 </table>

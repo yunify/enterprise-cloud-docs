@@ -2,7 +2,7 @@
 title: "故障排查"
 date: 2021-05-21T00:38:25+09:00
 description: 本小节主要介绍常见的故障排查方法。
-draft: false
+draft: true
 weight: 3
 keyword: 云计算, 迁移中心, V2V
 ---

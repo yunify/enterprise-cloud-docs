@@ -48,8 +48,108 @@ keyword: 云计算, 迁移中心, V2V
     </tr>
 </table>
 
+## 源平台支持列表
+
+<table border="1">
+    <tr>
+        <th width="150">平台类型</th>
+        <th width="150">版本</th>
+    </tr>
+    <tr>
+        <td>VMware vSphere</td>
+        <td>7.0</td>
+    </tr>
+    <tr>
+        <td>VMware vSphere</td>
+        <td>6.7</td>
+    </tr>
+    <tr>
+        <td>VMware vSphere</td>
+        <td>6.5</td>
+    </tr>
+</table>
 
 
+## 云平台虚拟机支持列表
+
+<table border="1">
+    <tr>
+        <th width="150">类型</th>
+        <th width="150">INSTANCE_CLASS_ID</th>
+    </tr>
+    <tr>
+        <td>性能型</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>超高性能型</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>SAN存储超高性能型</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>SAN存储性能型</td>
+        <td>7</td>
+    </tr>
+    <tr>
+        <td>基础性s1</td>
+        <td>101</td>
+    </tr>
+    <tr>
+        <td>企业型e1</td>
+        <td>201</td>
+    </tr>
+    <tr>
+        <td>企业级e2</td>
+        <td>202</td>
+    </tr>
+    <tr>
+        <td>企业级e3</td>
+        <td>203</td>
+    </tr>
+    <tr>
+        <td>专业增强型P1</td>
+        <td>301</td>
+    </tr>
+</table>
 
 
+## 云平台硬盘支持列表
+
+<table border="1">
+    <tr>
+        <th width="150">类型</th>
+        <th width="150">VOLUME_TYPE_ID</th>
+    </tr>
+    <tr>
+        <td>性能型本地盘</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>容量型云盘</td>
+        <td>2</td>
+    </tr>
+    <tr>
+        <td>超高性能型本地盘</td>
+        <td>3</td>
+    </tr>
+    <tr>
+        <td>通用型SSD云盘</td>
+        <td>5</td>
+    </tr>
+    <tr>
+        <td>容量型云盘</td>
+        <td>6</td>
+    </tr>
+    <tr>
+        <td>基础性本地盘</td>
+        <td>100</td>
+    </tr>
+    <tr>
+        <td>企业型SSD本地盘</td>
+        <td>200</td>
+    </tr>
+</table>
 

@@ -266,8 +266,7 @@ function saveAs(content, filename) {
 }
 
 function saveAllPdf() {
-  console.log("124");
-  window.open("http://139.198.18.154/files/all.pdf");
+  window.open("http://192.168.85.6:8000/files/all.pdf");
   // console.log('test')
   // var oReq = new XMLHttpRequest();
   // var URLToPDF = '/images/all.pdf';

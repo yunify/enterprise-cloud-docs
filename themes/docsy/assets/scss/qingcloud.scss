@@ -6,7 +6,7 @@
     padding: 38px 0;
     height: 220px;
     align-items: center;
-    background-color: #3d3e49;
+    background-color: $theme-color;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     color: #fff;
     h1 {
@@ -67,7 +67,7 @@ main section {
 header {
     min-height: 78px;
     position: relative;
-    background-color: #3d3e49;
+    background-color: $theme-color;
     nav {
         min-height: 64px;
     }
@@ -1381,11 +1381,17 @@ main.col-12.col-md-7.col-xl-7 {
     #mobile-slider-menu-block-nav {
         display: none !important;
     }
+    #head-block {
+        display: block !important;
+    }
 }
 
 @media (max-width : 300px) and (max-width : 1024px){
     #mobile-slider-menu-block-nav {
         display: flex !important;
+    }
+    #head-block {
+        display: none !important;
     }
 }
 
@@ -1515,6 +1521,10 @@ main.col-12.col-md-7.col-xl-7 {
     .td-sidebar-section-title .nav-trigger span::after {
         -webkit-transform: translateY(6px);
         transform: translateY(6px);
+    }
+
+    #head-block {
+        display: none !important;
     }
 }
 

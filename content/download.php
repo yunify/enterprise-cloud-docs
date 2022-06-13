@@ -7,7 +7,7 @@ class download{
 		//保存路径
 		$save_root = getcwd().'/download_tmp/';
 		//$url_host = 'http://'.$_SERVER['HTTP_HOST'].$url;
-		$url_host = 'http://139.198.1.69:8080/'.$url;
+		$url_host = 'http://192.168.85.6:8000/'.$url;
 		$save_file = urlencode($url).'.pdf';
 		//文件是否存在
 		$file_exists = file_exists($save_root.$save_file);

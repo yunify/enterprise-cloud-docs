@@ -268,7 +268,7 @@ nav.navbar {
     }
 
     header {
-        background-color: #3d3e49;
+        background-color: $theme-color;
     }
 
     .navbar .search {
@@ -636,7 +636,7 @@ nav.navbar {
         padding: 0;
         z-index: 1000;
         text-align: center;
-        background-color: #3d3e49;
+        background-color: $theme-color;
     }
     .nav-wrapper-index {
         background-color: transparent;
