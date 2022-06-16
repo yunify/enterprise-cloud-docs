@@ -17,7 +17,7 @@ weight: 1
 
 ### 2. app agent 是什么？如何安装 app agent 程序？   
 
-下载云平台提供的 app agent [Linux 版本](/appcenter/dev-platform/cluster-developer-guide/scripts/app-agent-linux-amd64.tar.gz), 
+下载云平台提供的 app agent  [Linux 版本](/appcenter/dev-platform/cluster-developer-guide/scripts/app-agent.tar.gz)，
 [Windows 版本](/appcenter/dev-platform/cluster-developer-guide/scripts/app-agent-windows-386.zip)，
 解压后运行 ./install.sh (Windows 下双击 install.bat)。    
 此 agent 中包含了自动配置文件程序 confd，该程序是在开源 confd 的基础上修改了一些 bug 并且增加了一些算术功能，
@@ -57,8 +57,9 @@ App有以下几种日志信息需要开发者关注。
 1. 集群云服务器里的 confd的日志     
     启动时的 log： /opt/qingcloud/app-agent/log/confd-onetime.log   
     其他操作修改时的 log： /opt/qingcloud/app-agent/log/confd.log  
+    
     > 其他操作是指修改了 confd 相关的 .toml 和 .tmpl 文件后,执行了 service confd restart 命令之后重新生成新的 confd 相关的日志。
-
+    
 2. 应用本身服务调用的日志     
     应用本身服务的初始化、启动、停止等指令，云平台 AppCenter 调度系统会发送这些命令到指定节点执行，非必填项。  
     在AppCenter 云应用开发平台上可以查到相关日志。

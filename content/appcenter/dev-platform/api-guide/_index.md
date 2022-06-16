@@ -1,9 +1,9 @@
 ---
-title: "服务商入驻"
+title: "API 应用上架指南"
 _build:
  render: false 
-description:
 draft: false
 collapsible: true
-weight: 30
+weight: 50
 ---
+

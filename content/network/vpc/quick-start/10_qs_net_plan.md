@@ -1,7 +1,7 @@
 ---
 title: "网络规划"
 keyword:  云计算, VPC, VPC 网络, 网络规划
-description: 介绍如何规划 VPC 网路及私有网络的数量及网段。
+description: 介绍如何规划 VPC 网络及私有网络的数量及网段。
 draft: false
 weight: 10
 ---

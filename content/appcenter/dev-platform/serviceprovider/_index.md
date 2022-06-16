@@ -1,10 +1,9 @@
 ---
-title: "产品规格"
-description:
+title: "服务商入驻"
 _build:
  render: false 
+description:
 draft: false
 collapsible: true
-weight: 30
+weight: 10
 ---
-
