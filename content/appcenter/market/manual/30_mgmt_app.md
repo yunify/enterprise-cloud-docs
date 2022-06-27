@@ -43,7 +43,7 @@ draft: false
 
        <img src="../../_images/api_use_detail.png"  />
 
-     - 点击**API 接口**，进入该  API 应用介绍页，可查看 API 使用文档，以及调试 API。
+     - 点击**API 接口**，进入该  API 应用介绍页，可查看 API 使用文档以及调试 API。
 
        <img src="../../_images/api_userguide_and_debug.png"  />
 

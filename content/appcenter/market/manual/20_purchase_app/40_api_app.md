@@ -55,7 +55,7 @@ draft: false
 
 ## 相关文档
 
-关于如何查看和使用已购买的 API 应用，请参见[应用管理](/appcenter/market/manual/40_mgmt_app/)。
+关于如何查看和使用已购买的 API 应用，请参见[应用管理](/appcenter/market/manual/30_mgmt_app/)。
 
 
 
