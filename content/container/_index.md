@@ -12,8 +12,8 @@ section1:
     - title: 容器引擎 QKE
       url: "/container/qke_plus/intro/introduction/"
 
-    - title: 弹性容器实例 QCI
-      url: "/container/qci/intro/introduction/"
+   # - title: 弹性容器实例 QCI
+   #   url: "/container/qci/intro/introduction/"
 
     - title: Harbor 镜像仓库
       url: "/container/harbor/intro/introduction/"
