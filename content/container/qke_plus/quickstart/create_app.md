@@ -3,7 +3,7 @@ title: "创建工作负载"
 description: 介绍如何登录 QKE 集群节点
 weight: 30
 draft: false
-keyword: 青云, QingCloud, 云计算, QKE, 容器, 应用
+keyword: 云计算, QKE, 容器, 应用
 ---
 
 QKE 集群创建完成后，您便可以在集群中创建工作负载来部署您的应用。

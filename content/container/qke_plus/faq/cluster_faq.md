@@ -3,7 +3,7 @@ title: "集群管理 FAQ"
 description: QKE 集群常见问题
 draft: false
 weight: 5
-keyword: 青云, QingCloud, QKE, 常见问题 
+keyword: QKE, 常见问题 
 ---
 
 <!--## 能否创建单节点集群？-->

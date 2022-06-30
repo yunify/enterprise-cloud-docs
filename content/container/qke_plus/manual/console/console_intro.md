@@ -3,7 +3,7 @@ title: "概述"
 description: 介绍 QKE 支持的可视化控制台。
 draft: false
 weight: 1
-keyword: 青云, QingCloud, 云计算, 容器, QKE, 控制台
+keyword: 云计算, 容器, QKE, 控制台
 ---
 
 QKE 除了自身的控制界面，还可扩展安装其他可视化集群管理控制台，以更好的管理您的容器及应用。

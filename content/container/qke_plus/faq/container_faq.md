@@ -19,7 +19,7 @@ Kubernetes 上的工作负载需要拉取 Docker 镜像，请确保集群所在�
 
 - 如果使用公网镜像仓库，比如 docker.io，请确保 VPC 绑定了公网 IP。  
 
-- 如果使用私有镜像仓库，比如青云提供的 [Harbor 镜像仓库](https://docsv3.qingcloud.com/container/harbor/intro/introduction/)，请确保 QKE 所有节点可以访问到 Harbor 的负载均衡器地址。
+- 如果使用私有镜像仓库，比如青云提供的 [Harbor 镜像仓库](/container/harbor/intro/introduction/)，请确保 QKE 所有节点可以访问到 Harbor 的负载均衡器地址。
 
   > **注意**
   >
@@ -108,7 +108,7 @@ Kubernetes 上的工作负载需要拉取 Docker 镜像，请确保集群所在�
    ...
    ```
 
-4. 找到未挂载上的存储卷对应的 PV `pvc-93e24c1d88d711e9`, 到 QingCloud 控制台查看硬盘名为 `pvc-93e24c1d88d711e9` 的硬盘应为可用状态。
+4. 找到未挂载上的存储卷对应的 PV `pvc-93e24c1d88d711e9`, 到控制台查看硬盘名为 `pvc-93e24c1d88d711e9` 的硬盘应为可用状态。
 
    ```
    # kubectl get pvc nginx-neonsan-pvc-nginx-perf-7 -n demo-project

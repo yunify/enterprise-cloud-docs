@@ -2,7 +2,7 @@
 title: "产品功能"
 description: 介绍 QKE 服务支持的功能。
 draft: false
-keyword: 青云, QingCloud, 云计算, QKE, Kubernetes, 容器
+keyword: 云计算, QKE, Kubernetes, 容器
 weight: 15
 ---
 
@@ -28,7 +28,7 @@ weight: 15
 
 | 功能模块         | 功能点                                                       |
 | ---------------- | ------------------------------------------------------------ |
-| 存储插件         | ⽀持 QingCloud-CSI 存储插件，默认使⽤ QingCloud 云平台块存储。 |
+| 存储插件         | ⽀持 CSI 存储插件，默认使⽤云平台块存储。 |
 | 存储卷及存储声明 | <ul><li>⽀持存储卷的全⽣命周期管理， 包括：创建、删除、扩容及 Snapshot 等操作。</li><li>⽀持持久化存储卷声明（PVC）挂接存储卷。</li><li>⽀持存储卷的动态创建和迁移。</li></ul> |
 | 存储监控         | <ul><li>提供多维度监控，包括节点状态、CPU 和内存使⽤情况， 以及存储、磁盘吞吐、⽹络出⼊和⽹卡流量以及 IOPS 等实时监控和历史数据。</li><li>支持对接企业⾃有监控告警系统。</li></ul> |
 | 存储管理         | <ul><li>可针对 etcd 进⾏定时备份，备份的 etcd 数据也可以⽤来迁移、恢复和重建集群。</li><li>⽀持第三⽅的灾备⼯具，如 Velero。</li></ul> |
@@ -37,7 +37,7 @@ weight: 15
 
 | <span style="display:inline-block;width:80px">功能模块</span> | 功能点                                                       |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 网络插件                                                     | <ul><li>⽀持容器网络部署使⽤ Calico 模式或 Flannel 模式。</li><li>提供容器⽹络直通、⼦⽹划分能⼒，可⾃动挂载 QingCloud 云平台负载均衡器，实现容器服务的外网访问。</li></ul><!--<li>⽀持 Hostnic、Calico、Flannel ⽹络插件，可以使⽤ Hostnic ⽹络插件、Qingcloud Cloud Controller 插件提供 SDN ⽹卡直连（Pod 直接绑定私有⽹卡）以及负载均衡。</li>--> |
+| 网络插件                                                     | <ul><li>⽀持容器网络部署使⽤ Calico 模式或 Flannel 模式。</li><li>提供容器⽹络直通、⼦⽹划分能⼒，可⾃动挂载云平台负载均衡器，实现容器服务的外网访问。</li><li>⽀持 Hostnic、Calico、Flannel ⽹络插件，可以使⽤ Hostnic ⽹络插件、负载均衡器插件提供 SDN ⽹卡直连（Pod 直接绑定私有⽹卡）以及负载均衡。</li></ul>|
 | 网络策略                                                     | ⽀持 NetworkPolicy。                                         |
 | 网络配置                                                     | ⽀持定义 Service 和 Pod 的 CIDR。                            |
 

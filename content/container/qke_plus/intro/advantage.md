@@ -3,7 +3,7 @@ title: "产品优势"
 description: QKE 产品优势
 draft: false
 weight: 5
-keyword: 青云, QingCloud, 云计算, QKE, Kubernetes, 容器
+keyword: 云计算, QKE, Kubernetes, 容器
 ---
 
 容器引擎 QKE 相对于自建 Kubernetes 集群，在易用性、可靠性、性能、可扩展性、成本投入以及可维护性等多方面都具备独特的优势，能最大限度满足企业构建容器服务的各种需求。
@@ -27,7 +27,7 @@ keyword: 青云, QingCloud, 云计算, QKE, Kubernetes, 容器
 - 通过 QKE 控制台，轻松实现集群节点的横向及纵向扩缩容。
 - 支持 Pod 横向弹性伸缩（HPA，Horizonal Pod Autoscaler）和纵向扩容（VPA，Vertical Pod Autoscaler）。
 - 支持集群节点[自动弹性伸缩](../../manual/mgt_node/auto_node/)，根据资源指标数据的变化，自动完成节点的增减。
-- 集成 [qingcloud-csi](https://github.com/yunify/qingcloud-csi) 存储插件，可以自动创建存储资源，支持硬盘自动扩容和自动迁移。
+- 集成 [csi](https://github.com/yunify/qingcloud-csi) 存储插件，可以自动创建存储资源，支持硬盘自动扩容和自动迁移。
 
 ## 低成本低门槛
 
@@ -37,7 +37,7 @@ keyword: 青云, QingCloud, 云计算, QKE, Kubernetes, 容器
 
 ## 稳定可靠
 
-- 依托于 QingCloud 公有云 IaaS 层能力，并对资源调用及管理的对接进行了优化，支持不同类型节点、支持青云块存储、支持创建负载均衡器，<!--、提供 Hostnic 网络组件实现容器网络隧道直通-->能够为集群提供更好的稳定性。
+- 依托于云平台 IaaS 层能力，并对资源调用及管理的对接进行了优化，支持不同类型节点、支持青云块存储、支持创建负载均衡器、提供 Hostnic 网络组件实现容器网络隧道直通能够为集群提供更好的稳定性。
 - 支持 3 Master HA 高可用，集群节点和工作负载支持跨可用区（AZ）部署，帮助您轻松构建同城多活业务架构，保障您的业务高可用，获得生产环境的高稳定性。
 
 ## 安全高效

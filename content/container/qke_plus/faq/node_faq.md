@@ -3,7 +3,7 @@ title: "节点管理 FAQ"
 description: QKE 集群常见问题
 draft: false
 weight: 10
-keyword: 青云, QingCloud, QKE, 常见问题 
+keyword: QKE, 常见问题 
 ---
 
 ## 如何增删主节点?

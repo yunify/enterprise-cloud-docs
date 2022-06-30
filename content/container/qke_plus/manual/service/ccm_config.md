@@ -18,11 +18,11 @@ weight: 30
 
 - 关于负载均衡器插件（cloud-controller-manager）：
 
-  [cloud-controller-manager](https://github.com/yunify/qingcloud-cloud-controller-manager) 是青云自主研发的负载均衡器插件，自动集成于 QKE 中。支持将 Kubernetes 内部服务和 QingCloud 负载均衡器关联起来，可自动创建负载均衡器、公网 IP，通过负载均衡器将服务暴露给集群外部调用。
+  [cloud-controller-manager](https://github.com/yunify/qingcloud-cloud-controller-manager) 是青云自主研发的负载均衡器插件，自动集成于 QKE 中。支持将 Kubernetes 内部服务和负载均衡器关联起来，可自动创建负载均衡器、公网 IP，通过负载均衡器将服务暴露给集群外部调用。
 
 ## 约束与限制
 
-除本文介绍的相关配置外，更多的功能支持，如**转发规则定义**、**透明代理**等功能还在开发中，目前暂不支持。建议您可以在[负载均衡器控制台](https://console.qingcloud.com/pek3/loadbalancers/)进行负载均衡器的更多更全面的配置。
+除本文介绍的相关配置外，更多的功能支持，如**转发规则定义**、**透明代理**等功能还在开发中，目前暂不支持。建议您可以在负载均衡器控制台进行负载均衡器的更多更全面的配置。
 
 > **注意**
 >
@@ -175,7 +175,7 @@ spec:
 
 > 说明
 >
-> 监听器参数说明，请参考[监听器 API 文档](https://docsv3.qingcloud.com/network/loadbalancer/api/listener/modify_listener_attribute/)。
+> 监听器参数说明，请参考[监听器 API 文档](/network/loadbalancer/api/listener/modify_listener_attribute/)。
 
 **配置示例**
 

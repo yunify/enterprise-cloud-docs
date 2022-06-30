@@ -3,7 +3,7 @@ title: "基本概念"
 description: QKE、Kubernetes、容器相关概念。
 draft: false
 weight: 30
-keyword: QingCloud, 青云, 云计算, QKE, Kubernetes, 容器, 集群，镜像
+keyword: QKE, Kubernetes, 容器, 集群，镜像
 ---
 
 本文为您介绍使用 QKE 过程中遇到的常用名词的基本概念和简要描述，以便于您更好地理解 QKE 产品。

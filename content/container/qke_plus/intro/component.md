@@ -3,7 +3,7 @@ title: "组件版本"
 description: QKE 配套组件说明。
 draft: false
 weight: 20
-keyword: 青云, QingCloud, 云计算, QKE, Kubernetes, 容器
+keyword: 云计算, QKE, Kubernetes, 容器
 ---
 
 <!--## 组件版本-->

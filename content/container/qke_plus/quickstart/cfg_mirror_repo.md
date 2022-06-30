@@ -3,7 +3,7 @@ title: "配置镜像仓库"
 description: 介绍如何登录 QKE 集群节点
 draft: false
 weight: 20
-keyword: 青云, QingCloud, 云计算, QKE, 容器, 镜像仓库
+keyword: 云计算, QKE, 容器, 镜像仓库
 ---
 
 镜像仓库用于托管及分发容器镜像，本文介绍如何部署及配置应用所需的镜像仓库。
@@ -20,23 +20,21 @@ keyword: 青云, QingCloud, 云计算, QKE, 容器, 镜像仓库
 
 ### 步骤一：部署镜像仓库
 
-推荐您使用青云提供的 [Harbor 镜像仓库](/container/harbor/intro/introduction/) 或 [Docker 镜像仓库](/container/dockerhub/intro/introduction/) 进行仓库部署。您也可以使用已部署好的自有镜像仓库。
+推荐您使用青云提供的 [Harbor 镜像仓库](/container/harbor/intro/introduction/)。您也可以使用已部署好的自有镜像仓库。
 
-- Harbor 镜像仓库
+Harbor 镜像仓库将 Harbor 制作成了 APP，能直接在 AppCenter 进行一键部署。
 
-  QingCloud Harbor 镜像仓库将 Harbor 制作成了 APP，能直接在 AppCenter 进行一键部署。
-
-  部署仓库的具体操作方法，请参[部署 Harbor 镜像仓库](/container/harbor/quickstart/qs10_deploy_harbor/  )。
+部署仓库的具体操作方法，请参[部署 Harbor 镜像仓库](/container/harbor/quickstart/qs10_deploy_harbor/  )。
 
   > **说明**
   >
   > 建议镜像仓库与 QKE 集群使用同一个 VPC 网络，以保证更好的访问速度。  
 
-- Docker 镜像仓库
+<!--  QingCloud Docker 镜像仓库基于 Docker 官方开源的 Docker Distribution 为用户提供了更灵活的 Docker 镜像的集中存储和分发服务。
 
-  QingCloud Docker 镜像仓库基于 Docker 官方开源的 Docker Distribution 为用户提供了更灵活的 Docker 镜像的集中存储和分发服务。
+  部署仓库的具体操作方法，请参见[创建 Docker 镜像仓库](/container/dockerhub/quickstart/create_repo/)。 -->
 
-  部署仓库的具体操作方法，请参见[创建 Docker 镜像仓库](/container/dockerhub/quickstart/create_repo/)。
+
 
 ### 步骤二：配置镜像仓库信息
 

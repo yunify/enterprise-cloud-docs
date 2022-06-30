@@ -2,19 +2,19 @@
 title: "创建 QKE 托管版集群 "
 description: 介绍如何创建 QKE 集群
 weight: 10
-keyword: 青云, QingCloud, 云计算, QKE集群, Kubernetes, 托管
+keyword: 云计算, QKE集群, Kubernetes, 托管
 ---
 
 本小节介绍如何快速创建 QKE 托管版集群。
 
 ## 前提条件
 
-- 已注册青云QingCloud 账号，并完成[实名认证](/authorization/account/manual/account_aut/account_intro/)。
-- 集群创建过程中将使用云服务器、硬盘、负载均衡器等多种资源，若资源配额不足，将无法成功创建集群。创建集群所需要的资源请参考[集群计费项](/container/qke_plus/billing/bill_des/)。若需提高配额，请[提交工单](https://console.qingcloud.com/tickets/)申请。
+- 已注册账号，并完成[实名认证](/authorization/account/manual/account_aut/account_intro/)。
+- 集群创建过程中将使用云服务器、硬盘、负载均衡器等多种资源，若资源配额不足，将无法成功创建集群。创建集群所需要的资源请参考[集群计费项](/container/qke_plus/billing/bill_des/)。若需提高配额，请提交工单申请。
 
 ## 操作步骤
 
-1. 登录 QingCloud 管理控制台。
+1. 登录管理控制台。
 
 2. 在控制台顶部的导航菜单中，选择**产品与服务** > **容器服务** > **容器引擎 QKE**，进入**快速入门**页面。
    
@@ -88,7 +88,7 @@ keyword: 青云, QingCloud, 云计算, QKE集群, Kubernetes, 托管
 
    **售后服务：**
 
-   请仔细阅读 [QKE 产品售后支持范围](/container/qke_plus/contracts/aftersale_scope/)，然后勾选“我已阅读并了解”。
+   请仔细阅读 QKE 产品售后支持范围，然后勾选“我已阅读并了解”。
 
 5. 选择购买时长（仅当集群为包年包月计费时需要设置）。
 
