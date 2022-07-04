@@ -10,6 +10,8 @@ icon: "/images/icons/index/product-icon-safety.svg"
 
 section1:
   children:
+    - title: 云防火墙 CFW
+      url: "/security/firewall/intro/intro/"
     - title: 安全组
       url: "/security/security_group/intro/introduction/"
     - title: 秘钥管理服务
