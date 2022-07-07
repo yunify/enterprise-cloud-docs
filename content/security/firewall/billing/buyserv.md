@@ -2,7 +2,6 @@
 
 title: "购买云防火墙服务"
 linkTitle: "购买云防火墙服务"
-date: 2020-02-28T10:08:56+09:00
 description: 如何购买云防火墙服务
 draft: false
 weight: 2
