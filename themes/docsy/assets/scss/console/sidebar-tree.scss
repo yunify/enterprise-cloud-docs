@@ -152,6 +152,17 @@ span.menu__title--collapse[data-depth="0"] {
     margin-left: 0;
 }
 
+.menu__title[data-depth="3"] {
+  font-size: 12px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  color: #939ea9;
+  margin-left: 0;
+}
+
 @media (min-width:760px) {
     .td-sidebar__inner {
         height: 100vh;

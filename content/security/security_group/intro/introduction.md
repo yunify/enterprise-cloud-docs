@@ -1,6 +1,5 @@
 ---
 title: "安全组简介"
-date: 2020-12-01T00:38:25+09:00
 description: 安全组介绍
 draft: false
 enableToc: false

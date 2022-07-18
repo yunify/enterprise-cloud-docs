@@ -1,6 +1,5 @@
 ---
 title: "术语解释"
-date: 2020-12-01T00:38:25+09:00
 description: 
 draft: false
 enableToc: false

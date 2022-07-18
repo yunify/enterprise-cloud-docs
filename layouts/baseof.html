@@ -10,6 +10,11 @@
     {{ $has_private = 1 }}
 {{ end }}
 {{ end }}
+{{ if .Site.Params.IsConsole }}
+<script>
+  window.location.href = '/compute/vm/intro/instance/'
+</script>
+{{ end }}
 <body class="td-{{ .Kind }}">
   <header>
     {{ partial "navbar.html" . }}
@@ -132,8 +137,6 @@
 
   <!-- {{ partial "footer.html" . }} -->
   {{ partialCached "scripts.html" . }}
-
 </body>
-
 
 </html>

@@ -21,6 +21,9 @@ section1:
     - title: 运维工具
       url: "/operation/tools/intro/scheduler/"
 
+    - title: 迁移中心
+      url: "/operation/migration/intro/introduction/"
+
 
 ---
 

@@ -317,16 +317,30 @@ $(function () {
     if (location.hash.trim() === "#ins-search") {
       $main.addClass("show");
     }
-    $input.on(
-      "input",
-      debounce(function () {
-        const keywords = $(this).val();
-        if (keywords) {
-          $container.addClass("show");
-        }
+    if (isConsole()) {
+      $("#console-search-btn").on("click", () => {
+        const keywords = $input.val();
         searchResultToDOM(search(jsonTemp, keywords), keywords);
-      }, 300)
-    );
+      });
+      $(document).on("keydown", function (e) {
+        if (e.keyCode === 13) {
+          const keywords = $input.val();
+          $container.addClass("show");
+          searchResultToDOM(search(jsonTemp, keywords), keywords);
+        }
+      });
+    } else {
+      $input.on(
+        "input",
+        debounce(function () {
+          const keywords = $(this).val();
+          if (keywords) {
+            $container.addClass("show");
+          }
+          searchResultToDOM(search(jsonTemp, keywords), keywords);
+        }, 300)
+      );
+    }
     $input.trigger("input");
   });
 });
@@ -347,8 +361,10 @@ function debounce(fn, delay) {
 
 $(document)
   .on("click focus", ".search-field", function () {
-    $container.addClass("show");
-    $main.find(".ins-search-input").focus();
+    if (!isConsole()) {
+      $container.addClass("show");
+      $main.find(".ins-search-input").focus();
+    }
   })
   .on("click focus", ".search-form-submit", function () {
     $container.addClass("show");
@@ -360,6 +376,12 @@ $(document)
   .on("click", ".ins-close", function () {
     $container.removeClass("show");
   })
+  .on("click", ".search-button", function (e) {
+    e.stopPropagation();
+    e.preventDefault();
+    $container.addClass("show");
+  })
+
   .on("keydown", function (e) {
     switch (e.keyCode) {
       case 27: // ESC
@@ -369,15 +391,22 @@ $(document)
         selectItemByDiff(-1);
         break;
       case 40: // DOWN
-        // $container.addClass("show");
         selectItemByDiff(1);
         break;
       case 13: //ENTER
-        $container.addClass("show");
         gotoLink($container.find(".ins-selectable.active").eq(0));
         break;
     }
   });
+// $("#console-search-btn").on("click", () => {
+//   gotoLink($container.find(".ins-selectable.active").eq(0));
+// });
+
+function isConsole() {
+  var isConsole = $(".console-search-block");
+  return isConsole.length;
+}
+
 $(document).on("click", (e) => {
   if ($container.hasClass("show")) {
     $container.removeClass("show");

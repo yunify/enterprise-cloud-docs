@@ -1,6 +1,5 @@
 ---
 title: "常用端口"
-date: 2020-12-01T00:38:25+09:00
 description: 安全组常用端口介绍
 draft: false
 enableToc: false
