@@ -1,18 +1,18 @@
 ---
-title: "设置 KubeSphere EIP"
-description: 介绍 QKE 支持的可视化控制台。
+title: "设置控制台 EIP"
+description: 介绍如何为控制台绑定 EIP。
 draft: false
-weight: 1
-keyword: 云计算, 容器, QKE, 控制台
+weight: 6
+keyword: 容器,QKE,KubeSphere,QKCP
 ---
 
 ## 操作场景
 
-当您需要通过公网访问 KubeSphere 控制台时，则需要为控制台设置一个公网 IP。
+当您需要通过公网访问可视化控制台时，则需要为控制台设置一个公网 IP。
 
 ## 前提条件
 
-- 已安装 KubeSphere 控制台。
+- 已安装可视化控制台。
 - 已创建或已有可用的公网 IP。公网 IP 须为`外部绑定`的公网 IP。
 
 ## 操作步骤
@@ -23,7 +23,9 @@ keyword: 云计算, 容器, QKE, 控制台
 
 3. 在集群列表，点击目标集群名称，进入**集群概览**页面。
 
-4. 可通过如下两种方式设置 KubeSphere 控制台 EIP。
+4. 可通过如下两种方式设置控制台 EIP。
+
+   以 KubeSpere 可视化控制台为例，其他控制台操作方法类似。
 
    - **方式一**：在**集群概览**页面的**可视化管理工具**区域，点击**选择 EIP**。
 
@@ -33,15 +35,15 @@ keyword: 云计算, 容器, QKE, 控制台
 
      ![](../../../_images/select_ks_eip_2.png)
 
-5. 在弹出的 **选择 EIP** 窗口中，选择需要绑定的 EIP，点击**确定**。
+5. 在弹出的**选择 EIP** 窗口中，选择需要绑定的 EIP，点击**确定**。
 
 ## 后续操作
 
 - 更换 EIP
 
-  为 KubeSphere 控制台绑定 EIP 后，如果您需要更换 EIP，可在**可视化控制台**页面点击<img src="../../../_images/edit_icon.png" />图标，修改 EIP。
+  为控制台绑定 EIP 后，如果您需要更换 EIP，可在**可视化控制台**页面点击<img src="../../../_images/edit_icon.png" />图标，修改 EIP。
 
   ![](../../../_images/bind_eip_done.png)
 
-- [登录 KubeSphere 控制台](../access_ks/)
+- [登录控制台](../access_ks/)
 

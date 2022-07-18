@@ -1,34 +1,28 @@
 ---
-title: "登录 KubeSphere"
-description: 本小节介绍如何在本地通过公网访问 KubeSphere。
+title: "登录控制台"
+description: 本小节介绍如何在本地通过公网访问可视化控制台。
 draft: false
 weight: 10
-keyword: 云计算, 容器, QKE, KubeSphere
+keyword: 容器,QKE,KubeSphere,QKCP
 ---
 
-如果您安装了 KubeSphere，则可以使用浏览器登录 KubeSphere 控制台。
+如果您安装了可视化控制台，则可以使用浏览器登录控制台。
 
-本小节介绍如何在本地通过公网访问 KubeSphere。
+本小节介绍如何在本地通过公网访问控制台。
 
 ## 前提条件
 
-- 已安装 KubeSphere 且 KubeSphere 后端已正常运行。
+- 已安装可视化控制台，且控制台后端正常运行。
 
-  > **说明**
-  >
-  > 可使用 `kubectl get po -n kubesphere-system`	命令查看运行状态。返回信息中，若 **Status** 列均显示`Runing`则表示KubeSphere 后端正常运行。
-
-- 已[绑定 Kubesphere 控制台 EIP](../bind_eip/)。
+- 已[绑定控制台 EIP](../bind_eip/)。
 
 - 确保用于访问的机器具备访问外网的能力。
 
 ## 背景信息
 
-首次登录 KubeSphere 请使用如下默认管理员账户及密码，登录后需要立即修改密码。
+首次登录控制台请使用系统预置的默认管理员账户及密码，登录后需要立即修改密码。
 
-- **用户名**：`admin`
-
-- **密码**：`P@88w0rd`
+点击控制台名称后的<img src="/container/qke_plus/_images/ks_version_info.png" style="zoom:50%;" />图标，可查看账号及密码信息。
 
 ## 操作步骤
 
@@ -42,11 +36,11 @@ keyword: 云计算, 容器, QKE, KubeSphere
 
    ![](../../../_images/access_ks.png)·	
 
-6. 可通过以几种下方式进入 KubeSphere 登录页面。
+6. 可通过以几种下方式进入控制台登录页面。
 
-   -  点击 **KubeSphere** 字样下方的公网 IP 地址，进入到 KubeSphere 登录页面。
-   - 点击 **前往控制台**，进入到 KubeSphere 登录页面。
-   - 在浏览器地址栏中，输入 KubeSphere 控制台绑定的公网 IP 并按下回车，进入到 KubeSphere 登录页面。
+   -  点击控制台名称下方的公网 IP 地址，进入到控制台登录页面。
+   - 点击**前往控制台**，进入到控制台登录页面。
+   - 在浏览器地址栏中，输入控制台绑定的公网 IP 并按下回车，进入到控制台登录页面。
 
    ​	![](../../../_images/kubesphere_login.png)·	
 

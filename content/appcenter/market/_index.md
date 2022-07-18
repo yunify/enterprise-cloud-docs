@@ -15,16 +15,12 @@ Section2:
   children:
 
     - title: 应用市场简介
-      content: 应用市场简介
-      url: "/appcenter/market/intro/10_introduction"
-
-    - title: 服务商入驻
-      content: 服务商入驻
-      url: "/appcenter/market/serviceprovider/10_prerequisite"
+      content: 什么是应用市场
+      url: "intro/10_introduction/"
 
     - title: 操作指南
       content: 应用市场操作指南
-      url: "/appcenter/market/manual/10_cloud_app"
+      url: "manual/10_find_app/"
 
 
 section4:
@@ -33,17 +29,17 @@ section4:
       content: 应用市场为用户提供各类丰富点应用服务。
       vice_title: 了解的第一步
       children:
-        - title: 应用市场市场简介
-          url: "/appcenter/market/intro/10_introduction"
+        - title: 应用市场简介
+          url: "intro/10_introduction"
       
     - title: 上手：使用应用
-      content: 您可获取到开通、购买、使用应用市场市场的应用。
+      content: 您可购买、使用应用市场的应用。
       vice_title: 使用指南
       children: 
-        - title: 云应用
-          url: "/appcenter/market/manual/10_cloud_app"
-        - title: SaaS 应用
-          url: "/appcenter/market/manual/20_saas_app"
+        - title: 购买应用
+          url: "manual/20_purchase_app/10_purchase_app/"
+        - title: 管理应用
+          url: "manual/30_mgmt_app/"
 ---
 
 

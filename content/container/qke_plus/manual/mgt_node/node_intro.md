@@ -16,13 +16,8 @@ weight: 1
 QKE 集群包含以下类型节点：
 
 - 主节点（Master）：Kubernetes 集群的管理者，运行着的服务包括 kube-apiserver、kube-scheduler、kube-controller-manager、etcd 组件，以及容器网络相关的组件。
-
 - 工作节点（Worker）：Kubernetes 集群中承担工作负载的节点，负责实际的 Pod 调度以及与控制节点的通信等。
 
-  其中，工作节点分为**工作节点-基础型**及**工作节点-企业型**：
-
-  - 工作节点-基础型：可选择所有 [基础型 s1](/compute/vm/intro/basic/) 机型（除2c/4g）。
-  - 工作节点-企业型：可选择所有 e3 机型，包括[计算型 ec3](/compute/vm/intro/enterprise/#计算型-ec3)、[通用型 eg3](/compute/vm/intro/enterprise/#通用型-eg3) 及[内存型 er3](/compute/vm/intro/enterprise/#内存型-er3)。
 
 ## 节点管理
 
@@ -31,10 +26,6 @@ QKE 集群包含以下类型节点：
 ![](/container/qke_plus/_images/node_mgt.png)
 
 **节点管理**页面展示当前集群的所有节点。
-
-> **说明**
->
-> 托管版集群仅展示工作节点；自管版集群则展示主节点及工作节点。
 
 您可以进行如下节点管理操作：
 

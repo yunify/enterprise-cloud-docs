@@ -1,24 +1,24 @@
 ---
-title: "安装 KubeSphere 内置组件"
+title: "安装控制台组件"
 description: 介绍如何安装 KubeSphere 组件。
 draft: false
 weight: 20
-keyword: 云计算, 容器, QKE, KubeSphere 组件
+keyword: 容器,QKE,KubeSphere,QKCP,组件
 ---
 
-本文介绍如何在集群创建后安装 KubeSphere 内置组件。
+本文介绍如何在集群创建后安装 KubeSphere/QKCP 内置组件。
 
 ## 背景信息
 
-KubeSphere 将一些核心功能组件进行解耦。这些组件设计成了可插拔式，您可以在安装 KubeSpahere 时选择需要安装的 KubeSphere 组件，也可以在 KubeSphere 安装后根据需要随时进行组件安装。
+KubeSphere/QKCP 将一些核心功能组件进行解耦。这些组件设计成了可插拔式，您可以在安装 KubeSpahere/QKCP 时选择需要安装的组件，也可以在 KubeSphere/QKCP 安装后根据需要随时进行组件安装。
 
 各组件的功能详细说明可参考 [KubeSphere 官方文档](https://kubesphere.com.cn/docs/pluggable-components/)。
 
 ## 注意事项
 
-- 安装 KubeSphere 内置组件将产生额外资源使用费用。安装 KubeSphere 组件需要一定的存储资源，故安装时会自动挂载一定数量的云硬盘，并对这些云硬盘进行收费。
+- 安装内置组件将产生额外资源使用费用。安装组件需要一定的存储资源，故安装时会自动挂载一定数量的云硬盘，并对这些云硬盘进行收费。
 - 请确保有足够的磁盘配额，否则可能因为缺乏资源导致安装失败。
-- 目前在 QKE 控制台仅支持安装组件，不支持卸载。若需要卸载，请前往 KubeSphere 控制台进行操作。
+- 目前在 QKE 控制台仅支持安装组件，不支持卸载。若需要卸载，请前往可视化控制台进行操作。
 
 ## 操作步骤
 
