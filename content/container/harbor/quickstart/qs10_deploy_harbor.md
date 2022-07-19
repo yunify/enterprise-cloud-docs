@@ -80,7 +80,7 @@ weight: 10
 
 ![network-setting](/container/harbor/_images/harbor-create-vxnet-set.png)
 
-选择已创建好的私有网络，并设置节点 IP 地址。
+选择已创建好的私有网络或基础网络（可手动设置 IP），完后选择安全组。
 
 > **说明**：
 >
@@ -125,7 +125,7 @@ weight: 10
 
 ### 第5步：用户协议
 
-阅读[《云平台 AppCenter 用户协议》并勾选确认接受该协议。
+阅读《云平台 AppCenter 用户协议》并勾选确认接受该协议。
 
 点击**提交**，开始创建 Harbor 集群所需资源。
 
