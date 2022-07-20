@@ -18,6 +18,8 @@ section1:
       url: "/security/key_management_service/intro/intro/"
     - title: 网络访问控制
       url: "/security/acl/intro/introduction/"
+    - title: 安全资源池
+      url: "/security/srp/intro/introduction/"
 ---
 
 
