@@ -5,6 +5,3 @@ collapsible: true
 type: "product"
 
 ---
-
-
-
