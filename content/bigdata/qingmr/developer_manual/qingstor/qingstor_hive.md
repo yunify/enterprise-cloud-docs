@@ -1,24 +1,23 @@
 ---
-title: "Hive 与 QingStor 集成"
-description: 本小节主要介绍如何Hive 与 QingStor 集成。 
-keyword: qingmr， Hive 与 QingStor ,
+title: "Hive 与对象存储集成"
+description: 本小节主要介绍如何Hive 与对象存储集成。 
 weight: 50
 collapsible: false
 draft: false
 ---
 
 
-## 基于 QingStor 的存储引擎
+## 基于对象存储的存储引擎
 
-1. 创建以 QingStor 为默认存储引擎的 Database。
+1. 创建以对象存储为默认存储引擎的 Database。
 
-   在 QingStor 的 bucket 中创建一个目录，这里命名为 test_s3 ，然后创建 Database。
+   在对象存储的 bucket 中创建一个目录，这里命名为 test_s3 ，然后创建 Database。
 
    ```shell
    $ hive> create database test_s3 location 's3a://<your_bucket_name>/test_s3';
    ```
 
-2. 在以 QingStor 为默认存储引擎的 Database 中创建 Table 。
+2. 在以对象存储为默认存储引擎的 Database 中创建 Table 。
 
    创建table，并载入测试数据。
    
@@ -38,7 +37,7 @@ draft: false
 
 ## 基于 HDFS 的存储引擎
 
-创建以 HDFS 为默认存储引擎的 Database ，并创建基于 QingStor 的外部表（使用示例 2 通过 Hive 导入 QingStor 的数据）。
+创建以 HDFS 为默认存储引擎的 Database ，并创建基于对象存储的外部表（使用示例 2 通过 Hive 导入对象存储的数据）。
 
 1. 在 root 下创建一个名为 test 的数据库：
 
@@ -52,7 +51,7 @@ draft: false
    $ /opt/hadoop/bin/hdfs dfs -chown -R ubuntu /user/hive/warehouse/test_hdfs.db
    ```
 
-3. 创建基于 QingStor 的外部表，并加入已有 partition。
+3. 创建基于对象存储的外部表，并加入已有 partition。
 
    ```shell
    $ hive> use test_hdfs;
@@ -61,9 +60,9 @@ draft: false
    $ hive> ALTER TABLE invites_s3 ADD PARTITION (ds='2008-08-08');
    ```
 
-## 将 QingStor 数据导入 HDFS
+## 将对象存储数据导入 HDFS
 
-将 QingStor 中的数据导入以 HDFS 为存储的 Hive 表中。
+将对象存储中的数据导入以 HDFS 为存储的 Hive 表中。
 
 1. 创建以 HDFS 为存储的 Hive 表
 
@@ -79,7 +78,7 @@ draft: false
    $ hive> set hive.exec.dynamic.partition.mode=nonstrict;
    ```
 
-3. 将 QingStor 中的数据导入。
+3. 将对象存储中的数据导入。
 
    ```shell
    $ hive> INSERT OVERWRITE table invites partition (ds) select se.foo,se.bar,se.ds from invites_s3 se;

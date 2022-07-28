@@ -59,7 +59,7 @@ $(function () {
       var start = url.length - 1;
       var last = url.substr(start, 1);
       if (last != "/") {
-        //只有青云的链接才加
+        //只有云平台的链接才加
         if (
           url.indexOf("http") == "-1" ||
           url.indexOf("docsv3.qingcloud") != "-1"
@@ -77,7 +77,7 @@ $(function () {
       url.indexOf("/#") == "-1" &&
       reg.test(url)
     ) {
-      //只有青云的链接才加
+      //只有云平台的链接才加
       if (
         url.indexOf("http") == "-1" ||
         url.indexOf("docsv3.qingcloud") != "-1"

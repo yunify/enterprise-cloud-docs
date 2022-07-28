@@ -1,13 +1,13 @@
 ---
-title: "Logstash 与 QingStor 对象存储集成"
-description: 本小节主要介绍 Logstash 与 QingStor 对象存储集成。
+title: "Logstash 与对象存储集成"
+description: 本小节主要介绍 Logstash 与对象存储集成。
 keyword: Logstash 对象存储集成,
 weight: 40
 collapsible: false
 draft: false
 ---
 
-Logstash 支持从 QingStor 对象存储输入数据到 Elasticsearch，或者从 Elasticsearch 导出数据到 QingStor 对象存储。
+Logstash 支持从对象存储输入数据到 Elasticsearch，或者从 Elasticsearch 导出数据到对象存储。
 
 | 版本 | 插件
 | - | -
@@ -64,7 +64,7 @@ Logstash 支持从 QingStor 对象存储输入数据到 Elasticsearch，或者�
    index => "my-first-index"
    ```
    
-   如还需输出到其他位置，可以通过`output_conf_content`指定，比如通过如下配置将数据上传到 QingStor 对象存储：
+   如还需输出到其他位置，可以通过`output_conf_content`指定，比如通过如下配置将数据上传到对象存储：
    
    ```ruby
    s3 {

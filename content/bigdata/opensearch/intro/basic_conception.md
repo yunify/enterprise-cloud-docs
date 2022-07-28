@@ -85,7 +85,7 @@ recovery 是指数据恢复或数据重新分布，OpenSearch 在有节点加入
 
 gateway 是指 OpenSearch 索引快照的存储方式，OpenSearch 默认优先将索引存放到内存中，当内存满时再将这些索引持久化存储至本地硬盘。
 
-gateway 对索引快照进行存储，当 OpenSearch 集群关闭再重新启动时就会从 gateway 中读取索引备份数据。OpenSearch 支持多种类型的 gateway，有本地文件系统（默认）、分布式文件系统、Hadoop 的 HDFS 和 QingStor。
+gateway 对索引快照进行存储，当 OpenSearch 集群关闭再重新启动时就会从 gateway 中读取索引备份数据。OpenSearch 支持多种类型的 gateway，有本地文件系统（默认）、分布式文件系统、Hadoop 的 HDFS 和 对象存储。
 
 ## discovery.zen
 

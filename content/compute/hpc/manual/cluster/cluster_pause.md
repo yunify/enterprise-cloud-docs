@@ -2,7 +2,6 @@
 title: "集群停机/启动"
 linkTitle: "集群停机/启动"
 description: 集群停机
-keyword: 云计算, 青云, QingCloud, HPC，集群停机，集群启动
 draft: false
 weight: 40
 ---

@@ -2,7 +2,6 @@
 title: "删除节点"
 linkTitle: "删除节点"
 description: 本章节介绍如何删除节点
-keyword: 云计算, 青云, QingCloud, HPC，删除节点
 draft: false
 weight: 70
 ---

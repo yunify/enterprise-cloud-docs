@@ -8,8 +8,7 @@ type: "product"
 section1:
   title: 账户中心
   vice_title: 账户中心为您提供账户设置、账户安全管理、子账户、账户组等模块。
-  #video: ""
-  #video_img: "/images/video.png"
+
 
 Section2:
   title: 用户指南

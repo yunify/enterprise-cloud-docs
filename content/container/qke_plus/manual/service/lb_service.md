@@ -82,7 +82,7 @@ spec:
 
 - `service.beta.kubernetes.io/qingcloud-load-balancer-eip-ids`
 
-  该 annotation 表示要创建公网类型的负载均衡器，其值为您在青云上创建好的公网 IP ID 号，系统会自动创建负载均衡器并绑定此公网 IP。公网 IP 必须是可用状态。
+  该 annotation 表示要创建公网类型的负载均衡器，其值为您创建好的公网 IP ID 号，系统会自动创建负载均衡器并绑定此公网 IP。公网 IP 必须是可用状态。
 
 - `service.beta.kubernetes.io/qingcloud-load-balancer-type`
 

@@ -16,7 +16,7 @@ $(document).ready(function(){
             doc_cate = "解决方案";
         }
         else if(category=="logs"){
-            doc_cate = "青云志";
+            doc_cate = "云平台";
         }
         else if(category=="news"){
             doc_cate = "新闻";
@@ -68,7 +68,7 @@ $(document).ready(function(){
                         if(cate_count[idx].key=='解决方案'){
                             solCount = cate_count[idx].doc_count;
                         }
-                        if(cate_count[idx].key=='青云志'){
+                        if(cate_count[idx].key=='云平台'){
                             logsCount = cate_count[idx].doc_count;
                         }
                         if(cate_count[idx].key=='新闻'){

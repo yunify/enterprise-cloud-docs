@@ -2,6 +2,7 @@
 title: "连接实例"
 description: 如何连接实例
 draft: false
+weight: 20
 keyword: 云计算, 云服务器，连接实例
 ---
 

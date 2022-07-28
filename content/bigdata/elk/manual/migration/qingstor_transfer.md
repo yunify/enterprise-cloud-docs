@@ -1,13 +1,13 @@
 ---
-title: "QingStor 迁移"
-description: 本小节主要介绍如何通过 QingStor 进行数据迁移。 
+title: "对象存储迁移"
+description: 本小节主要介绍如何通过对象存储进行数据迁移。 
 keyword: ELK,离线数据迁移,
 weight: 30
 collapsible: false
 draft: false
 ---
 
-通过 QingStor 对象存储完成数据迁移，可将 Elasticsearch 数据迁移到新 ELK 应用继续使用。
+通过对象存储完成数据迁移，可将 Elasticsearch 数据迁移到新 ELK 应用继续使用。
 
 > **注意**
 > 
@@ -27,7 +27,7 @@ draft: false
 1. 通过如下命令为源 Elasticsearch 集群创建 repository。
 
    ```bash
-   curl -XPUT 'http://<源 Elasticsearch 的 IP 地址>:9200/_snapshot/repo-qingstor/' -d'
+   curl -XPUT 'http://<源 Elasticsearch 的 IP 地址>:9200/_snapshot/repo-/' -d'
    {
      "type": "s3",
      "settings": {
@@ -49,9 +49,9 @@ draft: false
 | endpoint     | s3.pek3a.qingstor.com (请就近选择 pek3a, pek3b, sh1a，gd2 中的一个) |
 | access_key   | 云平台账号关联的 access_key                                    |
 | secret_key   | 云平台账号关联的 secret_key                                    |
-| bucket       | QingStor上 bucket 名称 my_qingstor_bucket (如果不存在将创建出来) |
+| bucket       | 对象存储上 bucket 名称 my_qingstor_bucket (如果不存在将创建出来) |
 
-2. 创建了 repository 后，用如下命令即可创建名为 backup-2019.05.13 的快照（该快照将会存放在之前指定的 QingStor 的 bucket my_qingstor_bucket 中）：
+2. 创建了 repository 后，用如下命令即可创建名为 backup-2019.05.13 的快照（该快照将会存放在之前指定的对象存储的 bucket my_qingstor_bucket 中）：
 
    ```bash
    创建包含集群所有 index 的 snapshot
@@ -78,12 +78,9 @@ draft: false
    >
    > 这里只有 IP 地址需变更为 ELK 集群的某一节点的 IP 地址，其他配置应与第四步中的配置完全相同。
 
-4. 通过如下命令恢复存储在 QingStor 的快照到 ELK 集群，完成数据迁移。
+4. 通过如下命令恢复存储在对象存储的快照到 ELK 集群，完成数据迁移。
 
    ```bash
    curl -H 'Content-Type: application/json' -XPOST 'http://<ELK集群的某一节点的IP地址>:9200/_snapshot/repo-qingstor/migration-2019.05.13/_restore'
    ```
 
-   > **说明**
-   >
-   > 目前 QingStor 对象存储只开放了 `北京3区-A`、`北京3区-B`、`上海1区-A` 和 `广东2区`，这些区内的数据迁移是不耗公网网络流量的，其他区借助对象存储迁移是需要耗费公网流量的。

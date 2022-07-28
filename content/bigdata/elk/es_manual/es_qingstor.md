@@ -1,13 +1,13 @@
 ---
-title: "Elasticsearch 与 QingStor 对象存储集成"
-description: 本小节主要介绍 Elasticsearch  与 QingStor 对象存储集成。
-keyword: Elasticsearch 对象存储,QingStor
+title: "Elasticsearch 与对象存储集成"
+description: 本小节主要介绍 Elasticsearch  与对象存储集成。
+keyword: Elasticsearch 对象存储
 weight: 25
 collapsible: false
 draft: false
 ---
 
-Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 cluster 的数据存储到某远端仓库（repository）, 并能从该远端仓库存储的快照中恢复数据。本应用的 Elasticsearch 可以通过 S3 Repository Plugin 与 QingStor 对象存储集成以便生成快照将数据存储到 QingStor 中，并可以在必要时从中恢复。
+Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 cluster 的数据存储到某远端仓库（repository）, 并能从该远端仓库存储的快照中恢复数据。本应用的 Elasticsearch 可以通过 S3 Repository Plugin 与对象存储集成以便生成快照将数据存储到对象存储中，并可以在必要时从中恢复。
 
 ## 操作步骤
 
@@ -32,7 +32,7 @@ Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 clust
 | endpoint   | s3.[region].qingstor.com （请根据实际情况就近选择，目前支持：pek3a, pek3b, sh1a，gd2。 |
 | access_key | 云平台账号关联的access_key                                     |
 | secret_key | 云平台账号关联的secret_key                                     |
-| bucket     | QingStor上bucket名称my_qingstor_bucket(如果不存在将创建出来) |
+| bucket     | 对象存储上bucket名称my_qingstor_bucket(如果不存在将创建出来) |
 
 > **说明**
 >
@@ -50,7 +50,7 @@ Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 clust
    curl -XDELETE $ES_IP:9200/_snapshot/repo-qingstor # 删除repository
    ```
 
-2. 用如下命令创建快照（该快照将会存放在之前指定的 QingStor 的 bucket  `my_qingstor_bucket` 中）：
+2. 用如下命令创建快照（该快照将会存放在之前指定的对象存储的 bucket  `my_qingstor_bucket` 中）：
 
    ```bash
    # 创建包含集群所有index的snapshot
@@ -80,7 +80,7 @@ Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 clust
    curl -XDELETE "$ES_IP:9200/_snapshot/repo-qingstor/backup-2019.05.13" # 删除snapshot
    ```
 
-4. 通过如下命令恢复存储在 QingStor 的快照到 Elasticsearch 集群：
+4. 通过如下命令恢复存储在对象存储的快照到 Elasticsearch 集群：
 
    ```bash
    # 恢复包含集群所有index的snapshot
@@ -102,7 +102,7 @@ Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 clust
    >
    > 要恢复的 index 必须是集群中处于关闭状态的 index, 处于打开状态的 index 将会提示无法恢复。
 
-5. 快照由于并没有和具体的集群信息绑定，所以也可以恢复到另一个不同的集群，用户可以用这种方法在不同集群之间通过 QingStor 导入导出数据。
+5. 快照由于并没有和具体的集群信息绑定，所以也可以恢复到另一个不同的集群，用户可以用这种方法在不同集群之间通过对象存储导入导出数据。
 
    > **说明**
    >
@@ -115,4 +115,4 @@ Elasticsearch 可以通过快照（snapshot）将指定 index 甚至整个 clust
    >
    > 更详细的有关集群快照的生成和恢复的信息请参考 [Elasticsearch 官方文档](https://www.elastic.co/guide/en/elasticsearch/reference/master/modules-snapshots.html)。
    >
-   > 如果 ES 集群和 QingStor 位于同一区域进行数据迁移耗公网流量，如果不在同一区域则需要消耗公网流量，比如位于 北京3区-A 的 ES 集群可以选择同一区域的 QingStor 避免产生公网流量。
+   > 如果 ES 集群和对象存储位于同一区域进行数据迁移耗公网流量，如果不在同一区域则需要消耗公网流量，比如位于 北京3区-A 的 ES 集群可以选择同一区域的对象存储避免产生公网流量。

@@ -1,18 +1,17 @@
 ---
-title: "与 QingStor 对象存储集成"
-description: 本小节主要介绍如何与 QingStor 对象存储集成。 
-keyword: HBase qingstro 存储,
+title: "与对象存储集成"
+description: 本小节主要介绍如何与对象存储集成。 
 weight: 50
 collapsible: false
 draft: false
 ---
 
 
-QingStor 对象存储为用户提供可无限扩展的通用数据存储服务，具有安全可靠、简单易用、高性能、低成本等特点。用户可将数据上传至 QingStor 对象存储中，以供数据分析。
+对象存储为用户提供可无限扩展的通用数据存储服务，具有安全可靠、简单易用、高性能、低成本等特点。用户可将数据上传至对象存储中，以供数据分析。
 
-由于 QingStor 对象存储兼容 AWS S3 API，因此 HDFS 可以通过 AWS S3 API 与 QingStor 对象存储高效集成，以满足更多的大数据计算和存储场景。
+由于对象存储兼容 AWS S3 API，因此 HDFS 可以通过 AWS S3 API 与对象存储高效集成，以满足更多的大数据计算和存储场景。
 
-有关 QingStor 的更多内容，请参考 [QingStor 对象存储用户指南](../../../../../storage/object-storage/)。
+有关对象存储的更多内容，请参考 [对象存储用户指南](../../../../../storage/object-storage/)。
 
 本小节以 test1 表为例，介绍如何使用 Phoenix 映射HBase 中已有的表。
 
@@ -94,23 +93,23 @@ QingStor 对象存储为用户提供可无限扩展的通用数据存储服务�
 
 | 参数 | 描述 |
 | :--- | :--- |
-| zone | QingStor 对象存储可用区，目前开放了 pek3b、pek3c、pek3d、sh1a、gd2a、gd2b 区。 |
+| zone | 对象存储可用区，目前开放了 pek3b、pek3c、pek3d、sh1a、gd2a、gd2b 区。 |
 | access_key | API 密钥 ID，**API 密钥 **。|
 | secret_key | API 密钥私钥。|
 
 ## 上传下载
 
-完成以上述操作后，可进行本地文件、HDFS 文件与 QingStor 对象存储之间到上传和下载。
+完成以上述操作后，可进行本地文件、HDFS 文件与对象存储之间到上传和下载。
 
 - 本地文件和对象存储之间的上传下载
 
   ```shell
   cd /opt/hadoop
-  # 从 `HBase 客户端`本地上传文件到 QingStor 对象存储
+  # 从 `HBase 客户端`本地上传文件到对象存储
   bin/hdfs dfs -mkdir s3a://{{bucket_name}}/${dir}
   bin/hdfs dfs -put LICENSE.txt s3a://{{bucket_name}}/${dir}/
   
-  # 将文件从 QingStor 对象存储下载到Client 主机本地
+  # 将文件从对象存储下载到Client 主机本地
   bin/hdfs dfs -get s3a://{{bucket_name}}/${dir}/LICENSE.txt
   ```
 
@@ -118,9 +117,9 @@ QingStor 对象存储为用户提供可无限扩展的通用数据存储服务�
 
   ```shell
   cd /opt/hadoop
-  # 将文件从 QingStor 对象存储拷贝到 HDFS 文件系统
+  # 将文件从对象存储拷贝到 HDFS 文件系统
   bin/hadoop distcp -libjars $HADOOP_S3 s3a://{{bucket_name}}/${dir}/LICENSE.txt /LICENSE.txt
   
-  # 将文件从 HDFS 文件系统拷贝到 QingStor 对象存储存储空间中
+  # 将文件从 HDFS 文件系统拷贝到对象存储存储空间中
   bin/hadoop distcp -libjars $HADOOP_S3 /LICENSE.txt s3a://{{bucket_name}}/${dir}/
   ```

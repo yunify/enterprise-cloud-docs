@@ -37,7 +37,7 @@ section2:
 section4:
   children:
   - title: 了解：什么是 QKE
-    content: QKE 集成了云平台的云服务器、存储、网络等资源，可以在青云平台一键部署高可用的 KubeSphere 集群，具有简单易用、自动运维、一键扩容等特点。
+    content: QKE 集成了云平台的云服务器、存储、网络等资源，可以在云平台一键部署高可用的 KubeSphere 集群，具有简单易用、自动运维、一键扩容等特点。
     vice_title: 了解的第一步
     children:
     - title: 产品简介

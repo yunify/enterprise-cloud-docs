@@ -2,7 +2,6 @@
 title: "添加节点"
 linkTitle: "添加节点"
 description: 本章节介绍如何添加节点
-keyword: 云计算, 青云, QingCloud, HPC，添加节点
 draft: false
 weight: 20
 ---

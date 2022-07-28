@@ -2,7 +2,6 @@
 title: "规格说明"
 linkTitle: "规格说明"
 description: 产品介绍
-keyword: 云计算, 青云, QingCloud, EHPC，规格说明
 draft: false
 weight: 20
 ---

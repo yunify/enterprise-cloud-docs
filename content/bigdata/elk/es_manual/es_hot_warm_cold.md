@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch 热-温-冷数据架构"
-description: 本小节主要介绍 Elasticsearch  与 QingStor 对象存储集成。
-keyword: Elasticsearch 对象存储,QingStor
+description: 本小节主要介绍 Elasticsearch  与 对象存储集成。
+keyword: Elasticsearch 对象存储
 weight: 30
 collapsible: false
 draft: false

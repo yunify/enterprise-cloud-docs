@@ -62,12 +62,7 @@ section3:
         - title: 基于云服务器搭建博客
           url: "/compute/vm/best-practices/linux/wordpress"
         
-# sectionVideo:
-#   title: 视频专区
-#   children:
-#     - title: 视频专区
-#       content: 这里是视频专区
-#       url: "/compute/vm/video/video"
+
        
 ---
 

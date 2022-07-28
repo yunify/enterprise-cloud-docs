@@ -2,7 +2,6 @@
 title: "队列概述"
 linkTitle: "队列概述"
 description: 队列概述
-keyword: 云计算, 青云, QingCloud, HPC, EHPC, 队列概述
 draft: false
 weight: 10
 ---

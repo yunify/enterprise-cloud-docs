@@ -2,7 +2,6 @@
 title: "重启节点"
 linkTitle: "重启节点"
 description: 本章节介绍如何重启节点
-keyword: 云计算, 青云, QingCloud, HPC，重启节点
 draft: false
 weight: 60
 ---

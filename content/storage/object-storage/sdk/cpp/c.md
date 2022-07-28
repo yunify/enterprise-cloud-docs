@@ -16,7 +16,7 @@ keyword: 云计算, 对象存储
 ```yaml
     access_key_id: 'ACCESS_KEY_ID_EXAMPLE'
     secret_access_key: 'SECRET_ACCESS_KEY_EXAMPLE'
-    host: 'qingstor.com'
+    host: 'xxxx.com'
     port: 443
     protocol: 'https'
     connection_retries: 3
@@ -43,7 +43,7 @@ keyword: 云计算, 对象存储
 
 ``` c
       qs_context_handle context_hdl;
-      context_hdl = qs_create_service_with_configfile("/etc/qingstor/config.yaml", "yourbucketname", "yourzone");
+      context_hdl = qs_create_service_with_configfile("/etc/xxxx/config.yaml", "yourbucketname", "yourzone");
 ```
 
  **方式二：** 可以通过指定 config 结构，设置具体 config 参数，来创建访问句柄。

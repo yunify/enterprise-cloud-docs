@@ -17,9 +17,9 @@ draft: false
 
 通过专用主节点，可提高集群稳定性。专用主节点执行群集管理任务，但不保留数据也不响应数据上传请求。此群集管理任务的卸载可增加您的域的稳定性。
 
-## Logstash 与 QingStor 对象存储集成
+## Logstash 与对象存储集成
 
-Logstash 支持从 QingStor 对象存储输入数据到 OpenSearch，或者从 OpenSearch 导出数据到 QingStor 对象存储。
+Logstash 支持从对象存储输入数据到 OpenSearch，或者从 OpenSearch 导出数据到对象存储。
 
 ## 与 Elasticsearch 的区别
 

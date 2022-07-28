@@ -9,17 +9,11 @@ type: "product"
 section1:
   title: 高性能计算 
   vice_title: 高性能计算是一站式超算平台，提供弹性和可扩展的 HPC 计算资源，是传统 HPC 技术与云计算技术的融合升级。提供丰富多样的使用模式适配多种应用场景，统一的管理系统提供最优的使用体验，工程师、研究人员可以突破本地 HPC 基础设施限制，快速开始设计创新。
-  # todo add qingstor introduction video
-  # video: "https://pek3a.qingstor.com/workshop/webhosting%20feb.16%20v3.mp4"
-  # video_img: "/images/video.png"
+
 
 Section2:
   title: 用户指南
   children:
-    # - title: 动态与公告
-    #   content: 产品动态和公告
-    #   url: "/storage/object-storage/news/history"
-
     - title: 产品简介
       content: 产品简介
       url: "intro/intro"

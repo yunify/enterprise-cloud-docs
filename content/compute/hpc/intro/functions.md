@@ -2,7 +2,6 @@
 title: "功能特性"
 linkTitle: "功能特性"
 description: 产品介绍
-keyword: 云计算, 青云, QingCloud, HPC，功能特性
 draft: false
 weight: 20
 ---

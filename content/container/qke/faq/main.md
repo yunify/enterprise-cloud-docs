@@ -1,9 +1,7 @@
 ---
 title: "常见问题"
-description: QKE 常见问题
 draft: false
 weight: 1
-keyword: 云平台, QKE, 常见问题 
 ---
 
 ## 能否创建单节点集群

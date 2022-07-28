@@ -3,7 +3,6 @@ title: "删除节点后挂载存储卷的容器组迁移失败"
 description: 介绍如何处理删除节点后挂载存储卷的容器组迁移失败的问题。
 weight: 20
 draft: false
-keyword: 云平台, 云计算, QKE, 容器, 存储卷
 ---
 
 ## 问题场景

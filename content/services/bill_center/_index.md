@@ -8,8 +8,6 @@ type: "product"
 section1:
   title: 费用中心
   vice_title: 在费用中心可以清晰查看到自己账户下的订单、账单及合约等相关信息。
-  #video: ""
-  #video_img: "/images/video.png"
 
 Section2:
   title: 用户指南

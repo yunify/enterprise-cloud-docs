@@ -110,7 +110,7 @@ class search_api
                             array(
                                 'filter' => array(
                                     'match' => array(
-                                        'category' => '青云志'
+                                        'category' => '云平台'
                                     )
                                 ),
                                 'weight' => 10
@@ -215,7 +215,7 @@ class search_api
                             array(
                                 'filter' => array(
                                     'match' => array(
-                                        'category' => '青云志'
+                                        'category' => '云平台'
                                     )
                                 ),
                                 'weight' => 10

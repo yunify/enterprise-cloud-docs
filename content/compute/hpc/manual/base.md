@@ -2,7 +2,6 @@
 title: "创建集群"
 linkTitle: "创建集群"
 description: 创建集群
-keyword: 云计算, 青云, QingCloud, HPC，创建集群
 draft: false
 weight: 10
 ---

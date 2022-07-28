@@ -6,7 +6,7 @@ keyword: QKE, 工作负载,服务,负载均衡器
 weight: 30
 ---
 
-本文主要介绍需要对接青云负载均衡器插件时，如何通过配置服务的注解（Annotation）来实现服务的一些高级配置功能。
+本文主要介绍需要对接负载均衡器插件时，如何通过配置服务的注解（Annotation）来实现服务的一些高级配置功能。
 
 ## 背景信息
 
@@ -18,7 +18,7 @@ weight: 30
 
 - 关于负载均衡器插件（cloud-controller-manager）：
 
-  [cloud-controller-manager](https://github.com/yunify/qingcloud-cloud-controller-manager) 是青云自主研发的负载均衡器插件，自动集成于 QKE 中。支持将 Kubernetes 内部服务和负载均衡器关联起来，可自动创建负载均衡器、公网 IP，通过负载均衡器将服务暴露给集群外部调用。
+  [cloud-controller-manager](https://github.com/yunify/qingcloud-cloud-controller-manager) 是自主研发的负载均衡器插件，自动集成于 QKE 中。支持将 Kubernetes 内部服务和负载均衡器关联起来，可自动创建负载均衡器、公网 IP，通过负载均衡器将服务暴露给集群外部调用。
 
 ## 约束与限制
 
@@ -33,7 +33,7 @@ weight: 30
  **配置方法**
 
 - 通过在 Service 的`annotations`中添加`ServiceAnnotationLoadBalancerType`来配置负载均衡器的规格。不添加此 key 的 Service 在 Event 中会有错误。其值范围与 [CreateLoadBalancer](/network/loadbalancer/api/loadbanlancer/create_lb/) 接口中的 `loadbalancer_typ` 取值范围相同。
-- 青云负载均衡器支持 http/https 协议的负载均衡，如果想要使用负载均衡器的七层能力，请将服务的特定的端口`name`指定为为`http`或`https`。
+- 负载均衡器支持 http/https 协议的负载均衡，如果想要使用负载均衡器的七层能力，请将服务的特定的端口`name`指定为为`http`或`https`。
 
 **配置示例**
 
@@ -56,7 +56,7 @@ spec:
 
 ##  配置负载均衡器公网 IP
 
-使用青云负载均衡器时需要配置一个公网 IP，cloud-controller 带有 IP 管理功能。
+使用负载均衡器时需要配置一个公网 IP，cloud-controller 带有 IP 管理功能。
 
 ### 手动配置公网 IP
 

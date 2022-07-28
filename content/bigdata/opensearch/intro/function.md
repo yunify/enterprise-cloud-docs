@@ -51,4 +51,4 @@ OpenSearch 集群服务具备以下功能特点：
 
 - 支持 OpenSearch Dashboard 数据可视化（原 Kibana）
 - 支持与云监控 CloudSat 集成，提供 OpenSearch 服务与资源的监控告警
-- 支持与 QingStor 数据集成，将流数据加载到 OpenSearch
+- 支持与对象存储数据集成，将流数据加载到 OpenSearch

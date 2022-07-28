@@ -8,7 +8,7 @@ draft: false
 weight: 10
 ---
 
-通过青云QingCloud 云平台 API 网关服务，您可以快速创建 API 网关专享实例。
+通过云平台 API 网关服务，您可以快速创建 API 网关专享实例。
 
 本小节主要介绍如何快速创建 API 网关专享实例。
 
@@ -18,7 +18,7 @@ weight: 10
 
 按照以下操作，创建 API 网关专享实例。
 
-1. 登录 [QingCloud 管理控制台](https://console.qingcloud.com/login)。
+1. 登录 管理控制台。
 
 2. 在控制台导航栏中，选择**产品与服务** > **消息队列与中间件** > **API Gateway** ，进入**API 网关**页面。
 

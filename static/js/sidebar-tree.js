@@ -2,7 +2,7 @@ var menuTitle = document.querySelectorAll(".menu__title");
 var modal = document.getElementById("myModal");
 var drawer = document.getElementById("myDrawer");
 const currentHideArr =
-  window.sessionStorage.getItem("hideArr").split(",") || window.hideArr;
+  window.sessionStorage.getItem("hideArr") ? window.sessionStorage.getItem("hideArr").split(",") : window.hideArr;
 $("#loading-mask").show();
 document.querySelectorAll(".menu__list").forEach(function (elem) {
   if (currentHideArr?.includes(elem.getAttribute("data-title"))) {

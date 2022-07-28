@@ -20,7 +20,7 @@ keyword: 云计算, QKE, 容器, 镜像仓库
 
 ### 步骤一：部署镜像仓库
 
-推荐您使用青云提供的 [Harbor 镜像仓库](/container/harbor/intro/introduction/)。您也可以使用已部署好的自有镜像仓库。
+推荐您使用 [Harbor 镜像仓库](/container/harbor/intro/introduction/)。您也可以使用已部署好的自有镜像仓库。
 
 Harbor 镜像仓库将 Harbor 制作成了 APP，能直接在 AppCenter 进行一键部署。
 

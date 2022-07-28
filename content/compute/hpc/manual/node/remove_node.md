@@ -2,7 +2,6 @@
 title: "移动计算节点到队列"
 linkTitle: "移动计算节点到队列"
 description: 本章节介绍如何将计算节点移动到队列
-keyword: 云计算, 青云, QingCloud, HPC，移动计算节点到队列
 draft: false
 weight: 80
 ---

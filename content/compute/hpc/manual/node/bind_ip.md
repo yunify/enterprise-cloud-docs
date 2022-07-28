@@ -2,7 +2,6 @@
 title: "节点绑定/解绑公网 IP"
 linkTitle: "节点绑定/解绑公网 IP"
 description: 本章节介绍如何绑定/解绑公网 IP
-keyword: 云计算, 青云, QingCloud, HPC，节点绑定/解绑公网 IP
 draft: false
 weight: 50
 ---

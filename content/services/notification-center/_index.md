@@ -8,8 +8,6 @@ type: "product"
 section1:
   title: 消息中心
   vice_title: 消息中心可以为用户提供系统消息的接收和管理。
-  #video: ""
-  #video_img: "/images/video.png"
 
 Section2:
   title: 用户指南

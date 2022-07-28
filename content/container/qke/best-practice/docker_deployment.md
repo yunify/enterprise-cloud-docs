@@ -3,7 +3,6 @@ title: "云服务器部署 Docker"
 description: 介绍如何在 Linux 云服务器上部署 Docker。
 draft: false
 weight: 10
-keyword: 云平台, 云计算, QKE, 云服务器, Docker
 ---
 
 本文介绍了如何在 Linux 云服务器实例中部署 Docker，并提供了 Docker 常用操作命令及简单的镜像制作过程。
