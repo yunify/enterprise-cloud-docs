@@ -2,6 +2,7 @@
 title: "基本概念"
 linkTitle: "基本概念"
 description: 基本概念
+keyword: 云计算,HPC，高性能计算
 draft: false
 weight: 50
 ---

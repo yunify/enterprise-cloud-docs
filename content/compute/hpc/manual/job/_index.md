@@ -1,6 +1,6 @@
 ---
-title: "作业管理"
-linkTitle: "作业管理"
+title: "作业"
+linkTitle: "作业"
 _build:
  render: false 
 weight: 30

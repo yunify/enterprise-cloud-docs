@@ -3,6 +3,7 @@ title: "WebSSH登录"
 linkTitle: "WebSSH登录"
 date: 2021-11-1T10:08:56+09:00
 description: hpc WebSSH登录
+keyword: 云计算, HPC，WebSSH登录
 draft: false
 weight: 50
 ---
@@ -21,7 +22,7 @@ weight: 50
 
 1. 登录管理控制平台。
 
-2. 选择**产品与服务** > **计算** > **高性能计算 HPC**，默认进入**集群管理**页面。
+2. 选择**产品与服务** > **计算** > **高性能计算 HPC**，默认进入**集群**页面。
 
 
 3. 点击已创建完成的集群 ID，进入集群详情页面，选择**节点列表**页签。 在**节点列表**页面，点击待重启节点所在行的<img src="../../../_images/more_operation.png" style="zoom:50%;" />，选择 **WebSSH**。
