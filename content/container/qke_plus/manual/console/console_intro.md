@@ -12,7 +12,7 @@ QKE 支持在创建集群时或创建集群后一键安装 KubeSphere 或 QKCP�
 > **说明**
 >
 > - [KubeSphere](https://kubesphere.io/) 是在 [Kubernetes](https://kubernetes.io/) （简称 K8s，开源容器调度平台）之上构建的企业级分布式多租户容器管理平台，提供全栈的 IT 自动化运维的能力，简化企业的 DevOps 工作流。是 CNCF 会员，已通过 Kubernetes 一致性验证。
-> - [QKCP](https://kubesphere.qingcloud.com/) 是源于 KubeSphere 开源社区的企业级容器管理平台。
+> - QKCP是源于 KubeSphere 开源社区的企业级容器管理平台。
 
 安装 KubeSphere/QKCP 后，您便可以在集群的**可视化控制台**界面看到控制台的使用入口。
 

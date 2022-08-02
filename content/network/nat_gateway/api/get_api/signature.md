@@ -25,7 +25,7 @@ weight: 30
   "instance_name":"demo",
   "image_id":"centos64x86a",
   "login_mode":"passwd",
-  "login_passwd":"QingCloud20210712",
+  "login_passwd":"login20210712",
   "version":1,
   "access_key_id":"QYACCESSKEYIDEXAMPLE",
   "action":"RunInstances",
@@ -50,7 +50,7 @@ weight: 30
   "instance_name":"demo",
   "instance_type":"small_b",
   "login_mode":"passwd",
-  "login_passwd":"QingCloud20130712",
+  "login_passwd":"login20130712",
   "signature_method":"HmacSHA256",
   "signature_version":1,
   "time_stamp":"2021-08-27T14:30:10Z",
@@ -73,7 +73,7 @@ weight: 30
   "instance_name":"demo",
   "instance_type":"small_b",
   "login_mode":"passwd",
-  "login_passwd":"QingCloud20130712",
+  "login_passwd":"login20130712",
   "signature_method":"HmacSHA256",
   "signature_version":1,
   "time_stamp":"2021-08-27T14%3A30%3A10Z",
@@ -94,7 +94,7 @@ weight: 30
 参数名和参数值之间用 “=” 号连接，参数和参数之间用 “＆” 号连接。构造后的URL请求如下示例：
 
 ```text
-access_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=QingCloud20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a
+access_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=login20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a
 ```
 
 ### 步骤 4: 构造被签名串
@@ -110,7 +110,7 @@ access_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64
 假设 HTTP 请求方法为 GET 请求的uri路径为 “/iaas/” 。则被签名串示例如下：
 
 ```test
-GET\n/iaas/\naccess_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=QingCloud20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a
+GET\n/iaas/\naccess_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=login20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a
 ```
 
 ### 步骤 5: 计算签名
@@ -136,7 +136,7 @@ import urllib
 from hashlib import sha256
 
 # 前面生成的被签名串
-string_to_sign = 'GET\n/iaas/\naccess_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=QingCloud20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a'
+string_to_sign = 'GET\n/iaas/\naccess_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=login20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a'
 h = hmac.new(secret_access_key, digestmod=sha256)
 h.update(string_to_sign)
 sign = base64.b64encode(h.digest()).strip()
@@ -155,7 +155,7 @@ access_key_id=QYACCESSKEYIDEXAMPLE
 &instance_name=demo
 &instance_type=small_b
 &login_mode=passwd
-&login_passwd=QingCloud20130712
+&login_passwd=login20130712
 &signature_method=HmacSHA256
 &signature_version=1
 &time_stamp=2021-08-27T14%3A30%3A10Z
@@ -175,7 +175,7 @@ https://api.qingcloud.com/iaas/?access_key_id=QYACCESSKEYIDEXAMPLE
 &instance_name=demo
 &instance_type=small_b
 &login_mode=passwd
-&login_passwd=QingCloud20130712
+&login_passwd=login20130712
 &signature_method=HmacSHA256
 &signature_version=1
 &time_stamp=2021-08-27T14%3A30%3A10Z
@@ -188,7 +188,7 @@ https://api.qingcloud.com/iaas/?access_key_id=QYACCESSKEYIDEXAMPLE
 实际 URL 如下：
 
 ```url
-https://api.qingcloud.com/iaas/?access_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=QingCloud20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a&signature=byjccvWIvAftaq%2BoublemagH3bYAlDWxxLFAzAsyslw%3D
+https://api.qingcloud.com/iaas/?access_key_id=QYACCESSKEYIDEXAMPLE&action=RunInstances&count=1&image_id=centos64x86a&instance_name=demo&instance_type=small_b&login_mode=passwd&login_passwd=login20130712&signature_method=HmacSHA256&signature_version=1&time_stamp=2021-08-27T14%3A30%3A10Z&version=1&vxnets.1=vxnet-0&zone=pek3a&signature=byjccvWIvAftaq%2BoublemagH3bYAlDWxxLFAzAsyslw%3D
 ```
 
 ## IAM 身份签名

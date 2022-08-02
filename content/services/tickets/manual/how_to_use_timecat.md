@@ -25,7 +25,6 @@ keyword: 添加扩展, 用户服务
 
 4、安装完成后固定到常用扩展
 
-![chrome_install_timecat](../../_images/how_to_use_timecat.assets/chrome_install_timecat.gif)
 
 ### 在 Edge 浏览器上添加扩展
 
@@ -35,7 +34,6 @@ keyword: 添加扩展, 用户服务
 
 3、将插件拖入浏览器完成安装
 
-![edge_install_timecat](../../_images/how_to_use_timecat.assets/edge_install_timecat.gif)
 
 ## 使用 TimeCat 捕获网页
 
@@ -43,7 +41,6 @@ keyword: 添加扩展, 用户服务
 
 单击扩展程序图标开始录制，还原操作并复现错误，将整个操作过程录制下来
 
-![timecat_capture](../../_images/how_to_use_timecat.assets/timecat_capture.gif)
 
 ### 提交
 

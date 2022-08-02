@@ -126,7 +126,7 @@ params: {"owner":"appCenter","action":"DescribeIAMApiActionsByTag"}
 
 ## 上传测试报告
 
-需要按照要求完成自测报告后，并上传自测报告。点击下载 [SaaS 自测报告](https://marketplace.pek3a.qingstor.com/Self-testReport/SaaS%E5%BA%94%E7%94%A8%E5%BC%80%E5%8F%91%E8%80%85%E8%87%AA%E6%B5%8B%E6%8A%A5%E5%91%8AV0.1.docx)。
+需要按照要求完成自测报告后，并上传自测报告。
 
 <img src="/appcenter/dev-platform/_images/um_saas_selftest.png" style="zoom:50%;" />
 

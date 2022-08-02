@@ -34,8 +34,6 @@ draft: false
 
 ### 响应项
 
-https://docs.qingcloud.com/appcenter/docs/specifications/specifications.html
-
 |<span style="display:inline-block;width:100px">参数</span> |<span style="display:inline-block;width:100px">类型</span>|<span style="display:inline-block;width:380px">描述</span>|
 | :--- | :--- | :--- | 
 | app_id | String | 应用 ID。 |

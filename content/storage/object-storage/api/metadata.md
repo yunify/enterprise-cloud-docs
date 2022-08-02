@@ -40,7 +40,7 @@ weight: 3
 
 ### 自定义元数据
 
-QingStor 对象存储支持用户自定义元数据，也支持用户修改这部分元数据信息。自定义元数据是指前缀为 `x-qs-meta-` 的键值对。QingStor 对象存储对自定义元数据的大小及有效字符均有限制。详细说明如下：
+对象存储支持用户自定义元数据，也支持用户修改这部分元数据信息。自定义元数据是指前缀为 `x-qs-meta-` 的键值对。对象存储对自定义元数据的大小及有效字符均有限制。详细说明如下：
 
 **有效字符集：**
 - 自定义元数据中的 `key` 只能由英文字母、数字、连接符 `-`、下划线 `_` 以及英文句号 `.` 组成。
@@ -68,8 +68,8 @@ QingStor 对象存储支持用户自定义元数据，也支持用户修改这�
 
 | API | 说明 |
 | - | - |
-| [GetObject](/storage/object-storage/api/object/basic_opt/get/) | 下载对象时，QingStor 对象存储服务端会返回该对象创建时所包含的元数据信息。|
-| [HeadObject](/storage/object-storage/api/object/basic_opt/head/) | 获取对象元数据时，QingStor 对象存储服务端会返回该对象创建时所包含的元数据信息。|
+| [GetObject](/storage/object-storage/api/object/basic_opt/get/) | 下载对象时，对象存储服务端会返回该对象创建时所包含的元数据信息。|
+| [HeadObject](/storage/object-storage/api/object/basic_opt/head/) | 获取对象元数据时，对象存储服务端会返回该对象创建时所包含的元数据信息。|
 
 ## 复制修改元数据
 

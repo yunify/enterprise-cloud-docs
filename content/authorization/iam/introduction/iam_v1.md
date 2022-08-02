@@ -7,7 +7,6 @@ description:
 draft: false
 ---
 
-![图片](../../_images/iam.png)
 
 ## 关于 IAM
 

@@ -13,7 +13,7 @@ API 服务相当于 API 的集合，API 提供者以 API 服务为单位，管�
 
 按照以下步骤，创建 API 服务。
 
-1. 登录 [QingCloud 管理控制台](https://console.qingcloud.com/login)。
+1. 登录 管理控制台。
 
 2. 在控制台导航栏中，选择**产品与服务** > **消息队列与中间件** > **API 网关** ，进入**API 网关**页面。
 
@@ -67,11 +67,9 @@ API 服务创建完成后，可在服务列表中查看已创建的服务信息�
 
 > **说明**
 >
-> 若下拉中无 DNS 域名可选，请进入[QingCloud 管理控制台](https://console.qingcloud.com/login)点击 **域名与网站** > **云解析 DNS**，新建 DNS 域名，操作流程可参考：[云解析 DNS](../../../../../site/dns/quickstart/creatgslbpolicy/)。
+> 若下拉中无 DNS 域名可选，请进入 管理控制台点击 **域名与网站** > **云解析 DNS**，新建 DNS 域名，操作流程可参考：[云解析 DNS](../../../../../site/dns/quickstart/creatgslbpolicy/)。
 >
-> 若用户不绑定域名，服务会默认被绑定一个以 `apig.qingcloud.com` 为后缀的域名，绑定新的域名后，域名数据刷新。
->
-> ![apiservice8-1](../_images/apiservice8-1.png)
+> 若用户不绑定域名，服务会默认被绑定一个以 `apig.domain.com` 为后缀的域名，绑定新的域名后，域名数据刷新。
 
 ## 删除服务
 

@@ -24,7 +24,7 @@ weight: 41
 
 按照以下步骤，创建 API 服务。
 
-1. 登录 [QingCloud 管理控制台](https://console.qingcloud.com/login)。
+1. 登录 管理控制台。
 
 2. 在控制台导航栏中，选择**产品与服务** > **消息队列与中间件** > **API 网关** ，进入**API 网关**页面。
 

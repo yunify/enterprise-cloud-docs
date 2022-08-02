@@ -131,7 +131,7 @@ docker ps -a
 vim Dockerfile	#修改Dockerfile文件，添加以下内容
 
 FROM nginx
-RUN echo '<h1>QINGCLOUD</h1>' > /usr/share/nginx/html/index.html
+RUN echo '<h1>example</h1>' > /usr/share/nginx/html/index.html
 ```
 >- FROM语句：表示使用nginx镜像作为基础镜像，一个Dockerfile中FROM是必备的指令，并且必须是第一条指令。
 >- RUN语句：格式为RUN <命令>，表示执行echo命令，修改NGINX默认首页内容。
@@ -156,5 +156,3 @@ docker images
 ```
 docker run -it -d -p 80:80 --name nginx nginx:v1
 ```
-* 在浏览器输入云服务器所绑定的弹性公网IP，访问测试容器运行情况。出现以下内容表示运行成功。
-<img src="../../_images/docker_deployment7.png" width="100%" height="40%">

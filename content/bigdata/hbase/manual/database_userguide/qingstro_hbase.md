@@ -45,7 +45,7 @@ draft: false
   ```
       <property>
           <name>fs.s3a.endpoint</name>
-          <value>s3.${zone}.qingstor.com</value>
+          <value>s3.${zone}.{domain}.com</value>
       </property>
       <property>
           <name>fs.s3a.access.key</name>

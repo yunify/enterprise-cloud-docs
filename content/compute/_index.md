@@ -15,7 +15,7 @@ Section1:
     - title: 镜像
       url: "/compute/image/intro/image/"
 
-    - title: 高性能计算 EHPC
+    - title: 高性能计算 HPC
       url: "/compute/hpc/intro/intro/"
 
     - title: SSH 密钥
