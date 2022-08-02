@@ -1,6 +1,6 @@
 ---
 title: "加入 VPC 网络"
-keyword: 云计算, VPC, VPC 网络, 私有网络
+keyword: VPC, VPC 网络, 私有网络
 description: 介绍如何将私有网络加入到 VPC 网络。
 draft: false
 weight: 8
@@ -16,13 +16,15 @@ weight: 8
 
 ## 操作步骤
 
-1. 登录 管理控制台。
+1. 登录管理控制台。
 
 2. 在控制台导航栏中，选择**产品与服务** > **网络服务** > **私有网络**，进入**私有网络**页面。
 
-3. 右键点击待加入的私有网络，选择**加入VPC网络**。
+3. 点击待加入的私有网络，选择**加入VPC网络**。
 
 4. 在弹出的页面中，选择需要加入的 VPC 网络，并配置私有网络的 IPv4 地址、网络 ACL 及其他高级参数。
+
+   <img src="/network/vpc/_images/502008_addto_vpc.png" alt="addto_vpc" style="zoom:50%;" />
 
 5. 点击**提交**。
 

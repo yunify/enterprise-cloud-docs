@@ -1,7 +1,7 @@
 ---
 title: "IPsec 隧道"
 description: 介绍 IPSEC 隧道的使用操作。
-keyword: 云计算, VPC, VPC 网络, IPSEC 隧道
+keyword: VPC, VPC 网络, IPSEC 隧道
 draft: false
 weight: 2
 ---
@@ -17,7 +17,7 @@ IPsec 是一种加密的隧道技术，通过使用加密的安全服务在不�
 
 ### 1. 配置 router1 的 IPsec 隧道
 
-1. 登录 管理控制台，选择**产品与服务** > **网络服务** > **VPC 网络**，进入 VPC 列表页面。
+1. 登录管理控制台，选择**产品与服务** > **网络服务** > **VPC 网络**，进入 VPC 列表页面。
 
 2. 找到您的 VPC 网络，点击 VPC 网络名称，进入详情页。
 
