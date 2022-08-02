@@ -36,7 +36,7 @@ API 请求主要分为 **延迟请求** 和 **实时请求** 两种。
 
 |<span style="display:inline-block;width:100px">参数</span> |<span style="display:inline-block;width:380px">描述</span>|<span style="display:inline-block;width:200px">说明</span>|
 | :--- | :--- | :--- | 
-| API 入口 | API 调用的 webservice 入口。| 统一为 [https://api.qingcloud.com/iaas/](https://api.qingcloud.com/iaas/) |
+| API 入口 | API 调用的 webservice 入口。| - |
 | 公共参数 | 每个 API 调用都需要包含公共参数 。| 详情可见 [公共参数](../../parameters) |
 | 指令名称 | API **action** 指令的名称，例如 `DescribeInstances` 。 | - |
 | 指令参数 | 指令相关配置参数。 |  - |

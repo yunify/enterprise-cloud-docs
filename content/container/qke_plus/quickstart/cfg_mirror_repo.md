@@ -30,7 +30,7 @@ Harbor 镜像仓库将 Harbor 制作成了 APP，能直接在 AppCenter 进行�
   >
   > 建议镜像仓库与 QKE 集群使用同一个 VPC 网络，以保证更好的访问速度。  
 
-<!--  QingCloud Docker 镜像仓库基于 Docker 官方开源的 Docker Distribution 为用户提供了更灵活的 Docker 镜像的集中存储和分发服务。
+<!--  镜像仓库基于 Docker 官方开源的 Docker Distribution 为用户提供了更灵活的 Docker 镜像的集中存储和分发服务。
 
   部署仓库的具体操作方法，请参见[创建 Docker 镜像仓库](/container/dockerhub/quickstart/create_repo/)。 -->
 
@@ -66,7 +66,7 @@ Harbor 镜像仓库将 Harbor 制作成了 APP，能直接在 AppCenter 进行�
    
      ```
      {
-     	"dockerhub.qingcloud.com":{                # "dockerhub.qingcloud.com"为仓库地址
+     	"dockerhub.domain.com":{                # "dockerhub.domain.com"为仓库地址
      		"auth":"YWRtaW46SGFyYm9yMTIzNDU="   # "YWRtaW46SGFyYm9yMTIzNDU=" 为 “用户名:密码” 进行 base64 编码后的字符串,用户名及密码不能有中文字符
      		},
      		"index.docker.io":{                 #可配置多个仓库的认证信息

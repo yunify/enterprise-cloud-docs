@@ -79,9 +79,9 @@ Date: Tue, 15 Nov 1994 08:12:31 GMT
 
 ### ETag
 
-对于通过 PUT Object 上传的对象，该值由 QingStor 服务端生成，用于标识 Object 的内容是否已被更新。需要注意的是，这里提到的 Object 内容，不包括元数据。
+对于通过 PUT Object 上传的对象，该值由对象存储服务端生成，用于标识 Object 的内容是否已被更新。需要注意的是，这里提到的 Object 内容，不包括元数据。
 
-对于通过 Multipart Upload 上传的对象，该值由调用 Complete Multipart Upload 接口时，请求头中的 ETag 来设置。若 ETag 值未被设置，QingStor 服务端，将会计算 ETag 值，并保存在 QingStor 的服务端。
+对于通过 Multipart Upload 上传的对象，该值由调用 Complete Multipart Upload 接口时，请求头中的 ETag 来设置。若 ETag 值未被设置，对象存储 服务端，将会计算 ETag 值，并保存在 对象存储 的服务端。
 
 详情可参考 [RFC 文档](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.19)。
 
@@ -91,7 +91,7 @@ Web服务器软件信息，固定为 `QingStor`。详情可参考 [RFC 文档](h
 
 ### x-qs-request-id
 
-服务端会为每个请求生成并返回一个唯一标示。用户提交工单时如果能附带此 ID 将有助于 QingStor 对象存储的研发团队定位问题。
+服务端会为每个请求生成并返回一个唯一标示。用户提交工单时如果能附带此 ID 将有助于对象存储的研发团队定位问题。
 
 ### Content-Range
 

@@ -21,7 +21,7 @@ ChronusDB 通过创建对象存储策略，并在创建表时添加语句指定�
 | :--- | :--- | :--- | :--- |
 | cluster        | String | 集群 ID。<li>取值示例 `cl-yxgxofd3`  | Yes      |
 | service        | String | 自定义服务类型。<li>取值 `delete_oss_policies`，表示删除存储策略服务。 | Yes      |
-| service_params | String | 自定义服务功能配置参数。<br> 取值示例 {"policies_name":"ossp","end_point":"","key_secret":"","key_id":"""} <br>- `policies_name` 表示存储策略名称。<br>- `end_point` 表示对象存储地址。s3 协议的对象存储地址必须以 ‘/’ 结尾 ，例如：http://s3.gd2.qingstor.com/bucketName/path/ 。<br>- `key_id` 表示 API 密钥的 ID。<br>- `key_secret` 表示 API 密钥的私钥。<span style="display: block; background-color: #D8ECDE; padding: 10px 24px; margin: 10px 0; border-left: 3px solid #00a971;"><b>说明</b>: <li>该配置参数输入格式，需为 URL 编码。</li></span>  | Yes |
+| service_params | String | 自定义服务功能配置参数。<br> 取值示例 {"policies_name":"ossp","end_point":"","key_secret":"","key_id":"""} <br>- `policies_name` 表示存储策略名称。<br>- `end_point` 表示对象存储地址。s3 协议的对象存储地址必须以 ‘/’ 结尾  。<br>- `key_id` 表示 API 密钥的 ID。<br>- `key_secret` 表示 API 密钥的私钥。<span style="display: block; background-color: #D8ECDE; padding: 10px 24px; margin: 10px 0; border-left: 3px solid #00a971;"><b>说明</b>: <li>该配置参数输入格式，需为 URL 编码。</li></span>  | Yes |
 
 ## 响应消息
 

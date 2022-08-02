@@ -1,7 +1,7 @@
 ---
 title: "参数介绍"
 description: 本小节主要介绍 QingMR 常用配置项。 
-keyword: QingMR 常用配置项；
+keyword: QingMR 常用配置项,
 weight: 10
 collapsible: false
 draft: false
@@ -31,11 +31,11 @@ draft: false
 - **hive.server2.idle.session.timeout**: hiveserver2 的 session 闲置超过该时间时将被关闭，置零或负值时将禁用。需填入时间值，单位( d/day, h/hour, m/min, s/sec, ms/msec, us/usec, ns/nsec )，不指定时默认 msec。
 - **hive.server2.idle.operation.timeout**: hiveserver2 的 session 中 operation 超过该时间时将被取消，置零或负值时将禁用。需填入时间值，单位( d/day, h/hour, m/min, s/sec, ms/msec, us/usec, ns/nsec )，不指定时默认 msec。
 - **hive.server2.session.check.interval**： hiveserver2 中检查 session 和 operation 超时的间隔时间，该值应该大于等于 3000msec ，置零或负值时将禁用。需填入时间值，单位( d/day, h/hour, m/min, s/sec, ms/msec, us/usec, ns/nsec )，不指定时默认 msec。
-- **QingStor**: 是否将 QingStor 与 Hadoop , Spark 和 Hive 集成，如需集成则必须输入相应的 access_key 及 secret_key 。
-- **QingStor_zone**: 指定 QingStor 的分区，目前开放了 pek3a 和 sh1a 。 其他分区何时开放请关注 QingMR 用户指南。
+- **QingStor**: 是否将对象存储与 Hadoop , Spark 和 Hive 集成，如需集成则必须输入相应的 access_key 及 secret_key 。
+- **QingStor_zone**: 指定对象存储的分区，目前开放了 pek3a 和 sh1a 。 其他分区何时开放请关注 QingMR 用户指南。
 - **s3.endpoint**: 兼容 S3 的对象存储的 endpoint, 如果指定了该值 QingStor_zone 将被忽略，常用于私有云中无法访问公有云对象存储的场景。通常公有云不用指定该值，如果指定须以 s3.<zone>.qingstor.com 格式
-- **access_key**: 指定 QingStor 的 access_key 。
-- **secret_key**: 指定 QingStor 的 secret_key 。
+- **access_key**: 指定对象存储的 access_key 。
+- **secret_key**: 指定对象存储的 secret_key 。
 - **enable_spark_standalone**: 是否开启 Spark Standalone 模式。开启后将可以以 Spark Standalone 模式提交 Spark 应用；关闭后可以以 Spark on YARN 模式提交 Spark 应用。如仅以 Spark on YARN 模式提交 Spark 应用或者仅使用 hadoop 相关功能，则可以选择关闭 Spark Standalone 模式以释放资源。此选项最好不要和其他配置参数项一起改，单独改动此项然后保存设置是推荐的作法。
 - **spark.master.SPARK_DAEMON_MEMORY**: Spark master 进程( Standalone 模式)占用内存( MB )。该值上限定为总内存-1024。
 - **spark.worker.SPARK_DAEMON_MEMORY**: Spark worker 进程( Standalone 模式)占用内存( MB )。该值上限定为总内存-1024。

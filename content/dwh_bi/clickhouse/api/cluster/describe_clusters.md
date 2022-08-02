@@ -135,7 +135,7 @@ https://api.qingcloud.com/iaas/?action=DescribeClusters
       "description":"",
       "tags":[],
       "app_info":{
-        "app_name":"ZooKeeper on QingCloud",
+        "app_name":"ZooKeeper",
         "app_id":"app-tg3lbp0a",
         "icon":"ca-iwg9qvsx"
       },

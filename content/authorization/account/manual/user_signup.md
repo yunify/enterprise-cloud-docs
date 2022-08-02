@@ -15,8 +15,6 @@ draft: false
 
 1. 进入云平台官网，点击页面右上方的**注册**，进入手机注册页面。
 
-   <img src="../../_images/user_signup_phone.png" style="zoom:40%;" />
-
 2. 输入手机号。
 
 3. 获取并输入手机收到的验证码。
@@ -33,8 +31,6 @@ draft: false
 ## 微信扫码注册
 
 1. 进入云平台官网，点击页面右上方的**注册**，进入手机注册页面。
-
-   <img src="../../_images/user_signup_weixin.png" style="zoom:40%;" />
 
 2. 点击右上角的二维码，切换至微信扫码注册页面。
 

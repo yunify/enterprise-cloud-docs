@@ -51,13 +51,13 @@ weight: 4
 | fetch_in_process |调用 Fetch Object API 时，有相同源链接的 Fetch 请求正在进行中，或被动触发的外部镜像功能正在抓取该源链接对应的文件 | 409 |
 | metadata_too_large | 自定义元数据总大小超过限制 2 KB 或键的长度，不含前缀 `x-qs-meta-`，超过 512 字节| 400 |
 | fetch_throttled | 服务端正在处理过多的抓取请求。包括 Fetch 请求从源链接抓取或外部镜像从源站抓取 | 429 |
-| internal_error | QingStor 对象存储系统内部错误，请稍后重试 | 500 |
-| service_unavailable | QingStor 对象存储系统临时不可用，请稍后重试 | 503 |
+| internal_error | 对象存储系统内部错误，请稍后重试 | 500 |
+| service_unavailable | 对象存储系统临时不可用，请稍后重试 | 503 |
 | upstream_failed | 无法与 Fetch 请求的源链接或者外部镜像的源站建立链接，或源站服务器返回 200，3xx，404 范围之外的错误代码，或链接中断| 503 |
 
 **说明**
-- 分段上传时，QingStor 对象存储对 Object 的一个分段大小做出了限制。最小为 4M，最大为 5G。
-- 单个 Object 上传时，QingStor 对象存储对其上限做出了限制，最大为 5G。
+- 分段上传时，对象存储对 Object 的一个分段大小做出了限制。最小为 4M，最大为 5G。
+- 单个 Object 上传时，对象存储对其上限做出了限制，最大为 5G。
 - 自定义元数据是指所有前缀为 `x-qs-meta-` 的键值对。计算自定义元数据大小时，不含前缀 `x-qs-meta-`。
 
 
@@ -70,7 +70,7 @@ weight: 4
   "code": "bad_request",
   "message": "Invalid argument(s) or invalid argument value(s)",
   "request_id": "aa08cf7a43f611e5",
-  "url": "http://docs.qingcloud.com/qingstor/api/error_code.html"
+  "url": "http://docs.domain.com/stor/api/error_code.html"
 }
 ```
 
@@ -79,7 +79,7 @@ weight: 4
 | --- | --- |
 | code | 错误码 |
 | message | 详细错误信息 |
-| request_id | 服务端为该次错误请求生成的唯一标示。QingStor 对象存储研发通过该 ID，能更快定位问题。 |
+| request_id | 服务端为该次错误请求生成的唯一标示。对象存储研发通过该 ID，能更快定位问题。 |
 | url | 指向相关帮助文档 |
 
 

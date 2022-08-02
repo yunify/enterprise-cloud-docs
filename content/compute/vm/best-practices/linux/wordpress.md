@@ -189,7 +189,6 @@ LNMP的安装时长视服务器的配置以及网络状态而定，安装完成�
 
 安装完成后，再次访问`(您的ip)/wordpress`，如`123.123.123.123/wordpress`，就可以成功登录到wordpress了~
 
-![1567739761788](../../_images/Build-Wordpress.assets/1567739761788.png)
 
 ## 后期备案
 

@@ -45,5 +45,4 @@ URL 会携带 code 参数
 http://console.qingcloud.com/app/app-8r2f7oyr/apply?code=FPNRDSJGKEZZPFIDIWTA
 ```
 
-<img src="/appcenter/dev-platform/_images/um_spi_success.png" style="zoom:50%;" />
 

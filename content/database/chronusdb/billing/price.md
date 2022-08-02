@@ -18,7 +18,7 @@ ChronusDB 仅对集群所占用的资源进行收费，ChronusDB 集群不额外
 |   VPC 网络资源        |  ChronusDB 集群依赖 VPC 网络资源，VPC 产生的费用将单独计算。价格请参考 [VPC 网络计费](/network/vpc/billing/price/)。 |  
 |   备份（可选）  |  您可以根据实际情况，备份 ChronusDB 集群。<br>ChronusDB 集群备份为**快照备份**，所有数据存储在硬盘。集群备份使用硬盘产生相应的费用按小时单独计算，与备份时间和备份数据量相关。价格请参考 [硬盘计费](/storage/disk/billing/price/)。  |
 |   监控告警（可选）  |  您可以根据实际情况为 ChronusDB 集群绑定指标告警策略。<li>若绑定的策略**监控周期**为 `5 分钟`，该功能免费使用。<li>若绑定的策略**监控周期**为 `1 分钟`，该功能会产生相应的费用，该费用单独计算。   |
-|   对象存储（可选）  |  您可以根据实际情况将 ChronusDB 数据存储到对象存储（QingStor）。<br>ChronusDB 存储数据到对象存储产生的费用单独计算，与存储时间与数据量相关。价格请参考[QingStor 计费](/storage/object-storage/billing/price/)。   |
+|   对象存储（可选）  |  您可以根据实际情况将 ChronusDB 数据存储到对象存储。<br>ChronusDB 存储数据到对象存储产生的费用单独计算，与存储时间与数据量相关。价格请参考[ 计费](/storage/object-storage/billing/price/)。   |
 
 ## 计费模式
 

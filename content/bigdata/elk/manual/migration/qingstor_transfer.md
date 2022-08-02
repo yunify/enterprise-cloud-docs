@@ -31,10 +31,10 @@ draft: false
    {
      "type": "s3",
      "settings": {
-       "endpoint": "s3.pek3a.qingstor.com",
+       "endpoint": "s3.pek3a.stor.com",
        "access_key": "<YourAccessKey>",
        "secret_key": "<YourSecretKey>",
-       "bucket": "my_qingstor_bucket"
+       "bucket": "my_stor_bucket"
      }
    }
    '
@@ -45,30 +45,30 @@ draft: false
 | 参数         | 说明                                                         |
 | ------------ | ------------------------------------------------------------ |
 | 集群节点地址 | <原云平台大数据平台的 Elasticsearch 集群的某一节点的 IP 地址> 需替换为具体的 IP 地址 |
-| repository   | repo-qingstor                                                |
-| endpoint     | s3.pek3a.qingstor.com (请就近选择 pek3a, pek3b, sh1a，gd2 中的一个) |
+| repository   | repo-stor                                                |
+| endpoint     | s3.pek3a.stor.com (请就近选择 pek3a, pek3b, sh1a，gd2 中的一个) |
 | access_key   | 云平台账号关联的 access_key                                    |
 | secret_key   | 云平台账号关联的 secret_key                                    |
-| bucket       | 对象存储上 bucket 名称 my_qingstor_bucket (如果不存在将创建出来) |
+| bucket       | 对象存储上 bucket 名称 my_stor_bucket (如果不存在将创建出来) |
 
-2. 创建了 repository 后，用如下命令即可创建名为 backup-2019.05.13 的快照（该快照将会存放在之前指定的对象存储的 bucket my_qingstor_bucket 中）：
+2. 创建了 repository 后，用如下命令即可创建名为 backup-2019.05.13 的快照（该快照将会存放在之前指定的对象存储的 bucket my_stor_bucket 中）：
 
    ```bash
    创建包含集群所有 index 的 snapshot
-   curl -XPUT 'http://<原云平台大数据平台的 Elasticsearch 集群的某一节点的IP地址>:9200/_snapshot/repo-qingstor/migration-2019.05.13?wait_for_completion=true'
+   curl -XPUT 'http://<原云平台大数据平台的 Elasticsearch 集群的某一节点的IP地址>:9200/_snapshot/repo-stor/migration-2019.05.13?wait_for_completion=true'
    ```
 
 3. 在 ELK 集群上创建和第一步中相同配置的 repository。命令如下：
 
    ```bash
-   curl -H 'Content-Type: application/json' -XPUT 'http://<ELK集群的某一节点的IP地址>:9200/_snapshot/repo-qingstor/' -d'
+   curl -H 'Content-Type: application/json' -XPUT 'http://<ELK集群的某一节点的IP地址>:9200/_snapshot/repo-stor/' -d'
    {
      "type": "s3",
      "settings": {
-       "endpoint": "s3.pek3a.qingstor.com",
+       "endpoint": "s3.pek3a.stor.com",
        "access_key": "<YourAccessKey>",
        "secret_key": "<YourSecretKey>",
-       "bucket": "my_qingstor_bucket"
+       "bucket": "my_stor_bucket"
      }
    }
    '
@@ -81,6 +81,6 @@ draft: false
 4. 通过如下命令恢复存储在对象存储的快照到 ELK 集群，完成数据迁移。
 
    ```bash
-   curl -H 'Content-Type: application/json' -XPOST 'http://<ELK集群的某一节点的IP地址>:9200/_snapshot/repo-qingstor/migration-2019.05.13/_restore'
+   curl -H 'Content-Type: application/json' -XPOST 'http://<ELK集群的某一节点的IP地址>:9200/_snapshot/repo-stor/migration-2019.05.13/_restore'
    ```
 

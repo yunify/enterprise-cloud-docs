@@ -1,7 +1,7 @@
 ---
 title: "功能特性"
 description: 本小节主要介绍 QingMR  简要主要功能特性。 
-keyword: QingMR  功能特性, 
+keyword: QingMR,功能特性, 
 weight: 15
 collapsible: false
 draft: false
@@ -12,9 +12,9 @@ QingMR 适用于流式数据处理、批量数据处理、极速数据查询与�
 
 - QingMR 通过 AppCenter 交付部署，3 分钟之内即可完成一个集群部署，并且能够通过可视化的方式完成服务的个性化定制，并提供完善的服务监控，真正实现一键部署、即刻使用。基于 AppCenter 框架内原生的应用感知机制，实现与其他大数据分析组件如 ZooKeeper 之间自动化的无缝集成。
 
-- QingMR 与 QingStor™ 对象存储平台也提供预置集成，用户通过简单的配置即可开启对 QingStor™ 对象存储的支持，以应对海量大规模数据的存储问题。
+- QingMR 与对象存储平台也提供预置集成，用户通过简单的配置即可开启对对象存储的支持，以应对海量大规模数据的存储问题。
 
-- QingMR 中的 Hadoop MapReduce ，Spark 和 Hive 都与 QingStor 对象存储服务进行了有效的集成，使得用户可以高效地进行海量数据的低成本存储。
+- QingMR 中的 Hadoop MapReduce ，Spark 和 Hive 都与对象存储服务进行了有效的集成，使得用户可以高效地进行海量数据的低成本存储。
 
 ## Hadoop 服务简介
 
@@ -74,7 +74,7 @@ Ranger 提供集中式权限管理框架，可以对 HDFS、HBase、Hive、Yarn 
 
 - 针对 HDFS, YARN, Spark 和 Flink 服务级别的监控告警、健康检查与服务自动恢复。
 
-- Hadoop, Spark 和 Hive 均可通过 S3 协议与 QingStor 对象存储集成。
+- Hadoop, Spark 和 Hive 均可通过 S3 协议与对象存储集成。
 
 - 支持水平与垂直扩容。
 

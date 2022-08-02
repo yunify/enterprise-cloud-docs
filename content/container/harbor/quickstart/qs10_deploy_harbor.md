@@ -12,7 +12,7 @@ weight: 10
 
 ## 操作前准备
 
-在部署 Harbor App 之前，您需要创建一个 VPC 网络和一个负载均衡器。另外，若您需要使用 [QingStor 对象存储](/storage/object-storage/intro/object-storage/) 做后端存储，则还需要创建一个 QingStor 对象存储的 Bucket 。
+在部署 Harbor App 之前，您需要创建一个 VPC 网络和一个负载均衡器。另外，若您需要使用 [对象存储](/storage/object-storage/intro/object-storage/) 做后端存储，则还需要创建一个对象存储的 Bucket 。
 
 1. 创建一个 VPC 网络和关联一个 Vxnet 私有网络。
 
@@ -43,7 +43,7 @@ weight: 10
 
    <img src="/container/harbor/_images/qs_10_add_rules.png" alt="rule" style="zoom:50%;" />
 
-4. 创建 Bucket（仅针对使用 QingStor 对象存储的用户，使用本地存储的用户请略过此步骤）
+4. 创建 Bucket（仅针对使用对象存储的用户，使用本地存储的用户请略过此步骤）
 
    对象存储桶（Bucket）是用户用于存储对象的容器，所有的对象都必须隶属于某个存储空间。
 
@@ -63,7 +63,7 @@ weight: 10
 
      > **说明**：
      >
-     > * 推荐使用 QingStor 对象存储来保证高可用和无限容量。（QingStor 对象存储是云平台提供的通用海量非结构化数据存储服务，具有安全可靠、简单易用、高性能、低成本等特点。）
+     > * 推荐使用对象存储来保证高可用和无限容量。（对象存储是云平台提供的通用海量非结构化数据存储服务，具有安全可靠、简单易用、高性能、低成本等特点。）
      > * 本地存储不支持高可用，且受单磁盘容量限制，仅建议测试使用。
 
      ![basic-info](/container/harbor/_images/harbor-create-basic-setting.png)
@@ -102,7 +102,7 @@ weight: 10
   >
   > Harbor 地址必须与负载均衡器的 IP 地址及协议保持一致，如 HTTP 协议地址：`http://192.168.2.2`；如果为 HTTPs 协议，则对应访问地址：`https://192.168.2.2` ，注意最后不要以`/` 结束。
 
-* 对象存储设置：使用 QingStor 对象存储服务来存储镜像文件的用户需要设置。
+* 对象存储设置：使用对象存储服务来存储镜像文件的用户需要设置。
 
   > **说明**：
   >
@@ -110,12 +110,12 @@ weight: 10
 
   - **Access_Key_ID** 和 **Secret_Access_Ke**y ：云平台提供给用户的授权密钥，可以在 **个人中心** > **API密钥** 中创建，然后点击**下载**，获取 access_key_id 和 secret_access_key。
 
-  - <b>对象存储区（Region）</b>：QingStor 存储空间 (Bucket) 的所在区域。
+  - <b>对象存储区（Region）</b>：对象存储存储空间 (Bucket) 的所在区域。
   - <b>对象存储桶（Bucket）</b>：Bucket 名称。
   - **存储根目录**：存储桶里用于存储镜像的根目录名称，默认为空，表示使用整个桶；Harbor 集群创建后将无法更改根目录。
   - **对象存储 URL**：对象存储的 URL 地址，如`https://qingstor.com`，默认会自动转换成兼容 S3 的地址`qingstor.com`。
 
-* **使用 S3 地址**：是否把对象存储 URL 转换成 QingStor 兼容 S3 的地址。**true** 表示对象存储 URL 是 S3 兼容 URL，格式为：http(s)://s3.<region>.your.domain，**false** 表示对象存储 URL 不是 S3 兼容 URL， 格式为：http(s)://your.domain，后台会自动转换成兼容 S3 格式 URL。
+* **使用 S3 地址**：是否把对象存储 URL 转换成对象存储兼容 S3 的地址。**true** 表示对象存储 URL 是 S3 兼容 URL，格式为：http(s)://s3.<region>.your.domain，**false** 表示对象存储 URL 不是 S3 兼容 URL， 格式为：http(s)://your.domain，后台会自动转换成兼容 S3 格式 URL。
 
 * **加载 trivy plugin**：是否加载 trivy plugin 来支持漏洞扫描。 **true** 表示开启加载，**false** 表示不开启。
 
