@@ -8,7 +8,7 @@ icon: "/images/icons/index/product-icon-network.svg"
 section1:
   children:
     - title: VPC 网络
-      url: "/network/vpc/intro/10_intro/"
+      url: "/network/vpc/intro/introduction/"
 
     - title: NAT 网关
       url: "/network/nat_gateway/intro/nat_gateway/"
