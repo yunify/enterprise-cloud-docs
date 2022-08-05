@@ -37,11 +37,11 @@ Section2:
 
     - title: 最佳实践
       content: 最佳实践
-      url: "/network/vpc/best-practices/best_practices"
+      url: "/network/vpc/best-practices/ipsec_star_topology/"
 
     - title: 常见问题
       content: 常见问题
-      url: "/network/vpc/faq/vpc_faq"
+      url: "/network/vpc/faq/how_to_use_public_network_dns_forwarding/"
 
 section3:
   title: 开发者指南

@@ -1,21 +1,18 @@
 ---
-title: "AddSpanMembers"
-description: 给SPAN添加成员。
-keyword: SPAN, 网络流量镜像
-weight: 6
+title: "DissociateDNSAliases"
+description: 从资源上解绑一个或多个内网域名。
+keyword: API, 内网域名别名
+weight: 15
 draft: false
 ---
 
-
-
-给SPAN添加成员，成员可以是instance id或vxnet id。
+从资源上解绑一个或多个内网域名。
 
 ## 请求参数
 
 | 参数 | 参数类型 | 描述 | 是否必选 |
 | --- | --- | --- | --- |
-| span | String | SPAN ID | Yes |
-| resources.n | String | SPAN成员，可以是instance id或vxnet id | Yes |
+| dns_aliases | Array | 内网域名别名 ID 列表 | Yes |
 | zone | String | 区域 ID，注意要小写 | Yes |
 
 [_公共参数_](../../get_api/parameters/)
@@ -33,9 +30,9 @@ draft: false
 **请求示例：**
 
 ```
-https://api.qingcloud.com/iaas/?action=AddSpanMembers
-&span=span-1234abcd
-&resources.1=i-1234abcd
+https://api.qingcloud.com/iaas/?action=DissociateDNSAliases
+&dns_alias.1=da-q8f2bu7
+&zone=pek3a
 &COMMON_PARAMS
 ```
 
@@ -43,8 +40,8 @@ https://api.qingcloud.com/iaas/?action=AddSpanMembers
 
 ```
 {
-  "action":"AddSpanMembersResponse",
-  "job_id":"j-1234abcd",
+  "action":"DissociateDNSAliasesResponse",
+  "job_id":"j-pp51vko0",
   "ret_code":0
 }
 ```

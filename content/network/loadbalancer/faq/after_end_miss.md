@@ -27,5 +27,5 @@ weight: 40
 
    ![](../../_images/ping_telnet.png)
 
-5. 若以上排查均无问题依然显示不可用，可[提交工单](https://console.qingcloud.com/tickets/)联系技术支持协助排查。
+5. 若以上排查均无问题依然显示不可用，可提交工单联系技术支持协助排查。
 

@@ -10,7 +10,7 @@ draft: false
 
 通过负载均衡器 L4-L7 的健康检查功能，可以准确的判断应用的可用性，在任意服务云服务器出现故障的情况下进行无缝切换，从而确保业务的高可用。同时，负载均衡器集群功能能够确保负载均衡器自身不会成为单点故障点。此外，结合自动伸缩功能，还可以基于负载均衡器监听器的健康检查机制，维持一个固定数量的后端集群。当健康的后端数量不等于所设置值时，会自动创建或删除后端服务器。
 
-推荐搭配方案：负载均衡器 + [自动伸缩](https://www.qingcloud.com/products/autoscaling/) + [云服务器](https://www.qingcloud.com/products/instances/)
+推荐搭配方案：负载均衡器 + 自动伸缩 + 云服务器
 
 <img src="../../_images/senario_high_av.png" style="zoom:50%;" />
 
@@ -18,13 +18,13 @@ draft: false
 
 通过负载均衡器对响应延迟时间、并发数、HTTP 多种状态响应数、后端服务器可用数量等各种数据的监控结果，结合自动伸缩功能，动态调整服务器后端数量，满足高并发大流量业务支持，同时通过对资源使用的动态调节实现使用成本的优化。
 
-推荐搭配方案：负载均衡器 + [自动伸缩](https://www.qingcloud.com/products/autoscaling/) + [云服务器](https://www.qingcloud.com/products/instances/)
+推荐搭配方案：负载均衡器 + 自动伸缩 + 云服务器
 
 ## 资源分组管理
 
 通过在私有网络中设置负载均衡器，实现对私有网络的资源分组管理。不同资源间的调用通过负载均衡器完成，根据不同的业务压力需求，透明的实现按需调整。适用于拥有大规模云服务器资源的复杂私有网络场景。
 
-推荐搭配方案：负载均衡器 + [云服务器](https://www.qingcloud.com/products/instances/) + [VPC 网络](https://www.qingcloud.com/products/vpc/)
+推荐搭配方案：负载均衡器 +[云服务器 + VPC 网络
 
 ## 满足政策需求
 

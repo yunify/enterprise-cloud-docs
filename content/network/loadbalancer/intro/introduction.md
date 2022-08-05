@@ -1,6 +1,6 @@
 ---
 title: "什么是负载均衡器"
-description: 青云负载均衡器产品介绍。
+description: 负载均衡器产品介绍。
 keyword: 负载均衡器, 类型, 原理
 weight: 10
 draft: false
