@@ -13,6 +13,7 @@ weight: 30
 ## 前提条件
 
 * 已获取安全实例云服务器 IP 地址。
+
 * 待配置网络与互联实例需在同一 VLAN 二层网络中。
 
   >**说明**
@@ -38,7 +39,7 @@ weight: 30
 3. 执行以下命令查看网络空间是否创建成功。
 
    ```
-   ip netns |grep <VLAN ID>
+   ip netns |grep <网络空间名>
    ```
 
    例如
@@ -56,7 +57,7 @@ weight: 30
 5. 执行以下命令创建虚拟网卡。
 
    ```
-   ip link add test0 type veth peer name <虚拟网卡名称>
+   ip link add <虚拟网卡名称1> type veth peer name <虚拟网卡名称>
    ```
 
 6. 执行以下命令将新建的虚拟网卡添加至新建的网络命名空间。
@@ -124,13 +125,13 @@ weight: 30
     ```bash
     ip netns exec <网络空间名称> route add -host <EIP 地址> gw <回源 IP 地址>
     ```
-    
+
     例如
-    
+
     ```bash
     ip netns exec ns_vm_218_10 route add -host 192.168.8.173 gw 10.50.20.2
     ```
-    
+
 11. 执行以下命令查询是否回源成功。
 
     ```
