@@ -65,7 +65,7 @@ Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集
 
    * **source.type**：选择源集群 Redis 的类型。这里的 `standalone` 表示 Redis Standalone 集群，`集群`表示 Redis Cluster 集群。
    * **source.address**：输入源 Redis 集群的地址。
-   * **target.type**：选在目的集群 Redis 的类型。这里的 `standalone` 表示 Redis Standalone 集群，`集群`表示 Redis Cluster 集群。
+   * **target.type**：选择目的集群 Redis 的类型。这里的 `standalone` 表示 Redis Standalone 集群，`集群`表示 Redis Cluster 集群。
    * **target.address**：输入目的 Redis 集群的地址。
 
    >**说明**
