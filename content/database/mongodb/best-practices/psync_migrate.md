@@ -12,7 +12,8 @@ keyword:  MongoDB，数据库，MongoShake
 
 MongoDB 两个集群之间可通过 MongoShake 进行跨集群的数据异步复制，实现灾备和多活的业务场景，同时也免去双写的业务开销。
 
-MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到各个不同的tunnel通道，用户可以通过对接 tunnel 通道获取关注的数据，例如对接 Direct 通道直接写入目的 MongoDB，或者对接 RPC 进行同步数据传输等。
+MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到各个不同的 tunnel 通道，用户可以通过对接 tunnel 通道获取关注的数据，例如对接 Direct 通道直接写入目的 MongoDB，或者对接 RPC 进行同步数据传输等。
+
 
 ![mongoshake](../../_images/mongoshake_00.png)
 
@@ -29,7 +30,7 @@ MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到�
 
 1. 在顶部**区域**下拉框中，选择部署区域。
 
-2. 填写 RedisShake 集群的基本信息，包括：名称、描述、选择版本、计费方式、自动备份时间、部署方式和可用区。
+2. 填写 MongoShake 集群的基本信息，包括：名称、描述、选择版本、计费方式、自动备份时间、部署方式和可用区。
 
    ![基本设置](../../_images/mongoshake_01.png)
 
@@ -49,7 +50,7 @@ MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到�
 
 ### 第4步：服务环境参数设置
 
-1. 填写参数。参数介绍请参见[MongoShake 参数介绍](/database/mongodb/best-practices/psync_migrate/#mongoshake-参数说明)。
+1. 填写参数。参数介绍请参见[MongoShake 参数介绍](/database/mongodb/best-practices/psync_migrate/#mongoshake-参数介绍)。
 
    ![网络设置](../../_images/mongoshake_04.png)
 
@@ -59,11 +60,12 @@ MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到�
 
 ### 第6步：查看异步复制监控
 
-待 RedisShake 集群创建成功，集群状态为`活跃`，集群节点服务状态为`正常`。在节点页签服务和资源监控页面可查看集群异步复制情况。
+待 MongoShake 集群创建成功，集群状态为`活跃`，集群节点服务状态为`正常`。在节点页签服务和资源监控页面可查看集群异步复制情况。
 
 ![查看](../../_images/mongoshake_05.png)
 
-### Mongoshake 参数说明
+### MongoShake 参数介绍
+
 
 | 参数                                         | 取值范围                                                     | 参数说明                                                     |
 | -------------------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |

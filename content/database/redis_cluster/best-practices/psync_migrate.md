@@ -59,48 +59,44 @@ Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集
 
 ### 第4步：服务环境参数设置
 
-1. 填写必填参数。
+1. 填写必填参数，点击**更多服务环境参数**并根据实际需求填写。
 
-   ![网络设置](../../_images/redisshake_04.png)
+   参数说明请参见 [RedisShake 参数介绍](/database/redis_cluster/best-practices/psync_migrate/#redisshake-参数介绍)。
 
-   * **source.type**：选择源集群 Redis 的类型。这里的 `standalone` 表示 Redis Standalone 集群，`集群`表示 Redis Cluster 集群。
-   * **source.address**：输入源 Redis 集群的地址。
-   * **target.type**：选择目的集群 Redis 的类型。这里的 `standalone` 表示 Redis Standalone 集群，`集群`表示 Redis Cluster 集群。
-   * **target.address**：输入目的 Redis 集群的地址。
+2. 点击**校验表单参数**。
 
-   >**说明**
-   >
-   >* 集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379
-   >* 集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如：172.22.4.2:6379;172.22...;172.22.4.7:6379
-   >* 源集群和目的集群的 IP 不可为同一个集群的 IP 地址。
-   >* 源集群和目的集群类型可选择相同类型的集群，也可选择不同类型的集群。
-
-2. 点击**更多服务环境参数**并根据实际需求填写。
-
-   以下列出关键参数，其他参数请根据提示填写。
-
-   - **source.password_raw** ：源端密码，留空表示无密码。
-
-   - **target.password_raw**：目标端密码，留空表示无密码。
-
-   - **resume_from_break_point**：断点续传开关。
-
-   - **key_exists**：当源目的有重复 key 时是否进行覆写.
-
-     >**注意**
-     >
-     >当打开断点续传时, 建议此选项为 `rewrite` 或 `ignore`。
-
-     - `-`: 一旦发生进程直接退出。
-     - `rewrite`: 源端覆盖目的端。
-     - `ignore`: 保留目的端key，忽略源端的同步 key。
-
-   - qps: 同步QPS上限。
-
-3. 点击**校验表单参数**。
-
-4. 待提示校验成功，点击**提交**。
+3. 待提示校验成功，点击**提交**。
 
 ### 第6步：查看异步复制监控
 
 待 RedisShake 集群创建成功，集群状态为`活跃`，集群节点服务状态为`正常`。在节点页签服务和资源监控页面可查看集群异步复制情况。
+
+![查看](../../_images/redisshake_05.png)
+
+### RedisShake 参数介绍
+
+| 参数                    | 取值范围                                                     | 参数说明                                                     |
+| ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
+| source.type             | <ul><li>standalone</li><li>集群</li></ul>                    | 源集群 Redis 的类型，必填。<ul><li>standalone：表示 Redis Standalone 集群</li><li>集群：表示 Redis Cluster 集群</li></ul> |
+| source.address          | -                                                            | 源 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如：172.22.4.2:6379;172.22...;172.22.4.7:6379</li></ul> |
+| target.type             | <ul><li>standalone</li><li>集群</li></ul>                    | 目标集群 Redis 的类型，必填。<ul><li>standalone：表示 Redis Standalone 集群</li><li>集群：表示 Redis Cluster 集群</li></ul> |
+| target.address          | -                                                            | 目标 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如：172.22.4.2:6379;172.22...;172.22.4.7:6379</li></ul> |
+| parallel                | 1 - 256                                                      | 启动多少个并发线程同步一个 RDB 文件，默认值为 32。           |
+| source.password_raw     | -                                                            | 源端密码，留空表示无密码。                                   |
+| target.password_raw     | -                                                            | 目标端密码，留空表示无密码。                                 |
+| fake_time               | -                                                            | 用于处理过期的键值，当迁移两端不一致的时候，目的端需要加上这个值。 |
+| key_exists              | <ul><li>rewrite</li><li>-</li><li>ignore</li></ul>           | 当源目的有重复 key 时是否进行覆写。<ul><li>`-`: 一旦发生进程直接退出。</li><li>`rewrite`: 源端覆盖目的端。</li><li>`ignore`: 保留目的端key，忽略源端的同步 key。</li></ul> |
+| filter.db.whitelist     | -                                                            | 指定的 db 被通过，比如 0；5；10 将会使 db0，db5，db10 通过, 其他的被过滤。 |
+| filter.db.blacklist     | -                                                            | 指定的 db 被过滤，比如 0；5；10 将会使 db0，db5，db10 过滤，其他的被通过。 |
+| filter.key.whitelist    | -                                                            | 支持按前缀过滤 key，只让指定前缀的 key 通过，分号分隔。比如指定 abc，将会通过 abc，abc1，abcxxx。 |
+| filter.key.blacklist    | -                                                            | 支持按前缀过滤 key，不让指定前缀的 key 通过，分号分隔。比如指定 abc，将会阻塞abc，abc1，abcxxx。 |
+| filter.slot             | -                                                            | 指定过滤slot，只让指定的 slot 通过。                         |
+| filter.lua              | <ul><li>true</li><li>false</li></ul>                         | 控制不让 lua 脚本通过，true 表示不通过。默认为 false。       |
+| big_key_threshold       | -                                                            | 如果目的端大版本小于源端, 也建议设置为1。默认值为524288000。 |
+| keep_alive              | -                                                            | TCP keep-alive 保活参数，单位秒，0 表示不启用。              |
+| qps                     | -                                                            | 同步 QPS 上限，默认值为 200000。                             |
+| resume_from_break_point | <ul><li>true</li><li>false</li></ul>                         | 断点传续开关。                                               |
+| log.level               | <ul><li>-</li><li>error</li><li>warn</li><li>info</li><li>debug</li></ul> | 日志等级。                                                   |
+| Enable web console      | <ul><li>true</li><li>false</li></ul>                         | 是否开启 WebConsole。<ul><li>true：表示开启。</li><li>false：表示关闭，不会重启 redis。</li></ul> |
+| 文件查看用户名          | -                                                            | 登录 console 界面管理员账户。                                |
+| 文件查看密码            | -                                                            | 登录 console 界面管理员账户密码。                            |
