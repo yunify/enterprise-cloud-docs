@@ -1,17 +1,16 @@
 ---
-title: "使用 RedisShake 实现 Redis 跨集群异步复制"
+title: "利用 RedisShake 实现 Redis 跨集群异步复制"
 description: 介绍如何使用 RedisShake 实现 Redis 跨集群异步复制
-weight: 10
+weight: 30
 collapsible: false
 draft: false
 keyword:  Redis Cluster，数据库，RedisShake
-
 
 ---
 
 ## 场景描述
 
-Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集群的数据异步复制，实现灾备和多活的业务场景，同时也免去双写的业务开销。RedisShake 的基本原理则是模拟一个从节点加入源 Redis 集群进行全量拉取并回放，然后进行增量的拉取（通过psync命令）实现目的集群与源集群的异步复制。
+Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集群的数据异步复制，实现灾备和多活的业务场景，同时也免去双写的业务开销。RedisShake 的基本原理则是模拟一个从节点加入源 Redis 集群进行全量拉取并回放，然后进行增量的拉取（通过 psync 命令）实现目的集群与源集群的异步复制。
 
 ## 约束与限制
 
@@ -35,6 +34,10 @@ Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集
 ## 操作步骤
 
 进入 RedisShake 集群创建界面。
+
+>**说明**
+>
+>RedisShake 环境入口请提交工单或联系管理员获取。
 
 ### 第1步：基本设置
 
@@ -64,6 +67,8 @@ Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集
 
    参数介绍请参见 [RedisShake 参数介绍](/database/redis_standalone/best-practices/psync_migrate/#redisshake-参数介绍)。
 
+   ![填写参数](../../_images/redisshake_04.png)
+
 2. 点击**校验表单参数**。
 
 3. 待提示校验成功，点击**提交**。
@@ -79,9 +84,9 @@ Redis Cluster 和 Redis Standalone 可通过 RedisShake 进行同集群或跨集
 | 参数                    | 取值范围                                                     | 参数说明                                                     |
 | ----------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | source.type             | <ul><li>standalone</li><li>集群</li></ul>                    | 源集群 Redis 的类型，必填。<ul><li>standalone：表示 Redis Standalone 集群</li><li>集群：表示 Redis Cluster 集群</li></ul> |
-| source.address          | -                                                            | 源 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如：172.22.4.2:6379;172.22...;172.22.4.7:6379</li></ul> |
+| source.address          | -                                                            | 源 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如："172.22.4.2:6379;172.22...;172.22.4.7:6379"<br>注意：多个 IP 地址必须加双引号 <code>""</code>。</li></ul> |
 | target.type             | <ul><li>standalone</li><li>集群</li></ul>                    | 目标集群 Redis 的类型，必填。<ul><li>standalone：表示 Redis Standalone 集群</li><li>集群：表示 Redis Cluster 集群</li></ul> |
-| target.address          | -                                                            | 目标 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如：172.22.4.2:6379;172.22...;172.22.4.7:6379</li></ul> |
+| target.address          | -                                                            | 目标 Redis 地址，必填。<ul><li>集群类型选择 `standalone` 时对应集群地址需填写 VIP 地址，例如：172.22.4.253:6379</li><li>集群类型选择`集群`时对应集群地址需填写所有节点 IP 地址，例如："172.22.4.2:6379;172.22...;172.22.4.7:6379"<br/>注意：多个 IP 地址必须加双引号 <code>""</code>。</li></ul> |
 | parallel                | 1 - 256                                                      | 启动多少个并发线程同步一个 RDB 文件，默认值为 32。           |
 | source.password_raw     | -                                                            | 源端密码，留空表示无密码。                                   |
 | target.password_raw     | -                                                            | 目标端密码，留空表示无密码。                                 |

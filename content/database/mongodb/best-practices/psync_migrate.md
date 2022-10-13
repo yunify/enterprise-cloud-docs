@@ -1,10 +1,11 @@
 ---
-title: "使用 MongoShake 实现 MongoDB 跨集群异步复制"
+title: "利用 MongoShake 实现 MongoDB 跨集群异步复制"
 description: 介绍如何使用 RedisShake 实现 Redis 跨集群异步复制
-weight: 10
+weight: 60
 collapsible: false
 draft: false
 keyword:  MongoDB，数据库，MongoShake
+
 
 ---
 
@@ -25,6 +26,10 @@ MongoShake 异步复制原理为从源库抓取 oplog 数据，然后发送到�
 ## 操作步骤
 
 进入 MongoShake 集群创建界面。
+
+>**说明**
+>
+>MongoShake 环境入口请提交工单或联系管理员获取。
 
 ### 第1步：基本设置
 
